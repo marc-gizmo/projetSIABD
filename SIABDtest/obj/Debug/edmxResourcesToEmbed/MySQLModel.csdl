@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MySQLModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="MySQLEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="abonnesdbs" EntityType="MySQLModel.abonnesdbs" />
+    <EntitySet Name="commentsdbs" EntityType="MySQLModel.commentsdbs" />
+    <EntitySet Name="likesdbs" EntityType="MySQLModel.likesdbs" />
+    <EntitySet Name="messagesdbs" EntityType="MySQLModel.messagesdbs" />
+    <EntitySet Name="my_aspnet_applications" EntityType="MySQLModel.my_aspnet_applications" />
+    <EntitySet Name="my_aspnet_membership" EntityType="MySQLModel.my_aspnet_membership" />
+    <EntitySet Name="my_aspnet_profiles" EntityType="MySQLModel.my_aspnet_profiles" />
+    <EntitySet Name="my_aspnet_roles" EntityType="MySQLModel.my_aspnet_roles" />
+    <EntitySet Name="my_aspnet_sessioncleanup" EntityType="MySQLModel.my_aspnet_sessioncleanup" />
+    <EntitySet Name="my_aspnet_sessions" EntityType="MySQLModel.my_aspnet_sessions" />
+    <EntitySet Name="my_aspnet_users" EntityType="MySQLModel.my_aspnet_users" />
+    <EntitySet Name="my_aspnet_usersinroles" EntityType="MySQLModel.my_aspnet_usersinroles" />
+    <EntitySet Name="themesdbs" EntityType="MySQLModel.themesdbs" />
+    <AssociationSet Name="abonnesdbs_ibfk_1" Association="MySQLModel.abonnesdbs_ibfk_1">
+      <End Role="themesdbs" EntitySet="themesdbs" />
+      <End Role="abonnesdbs" EntitySet="abonnesdbs" />
+    </AssociationSet>
+    <AssociationSet Name="abonnesdbs_ibfk_2" Association="MySQLModel.abonnesdbs_ibfk_2">
+      <End Role="my_aspnet_membership" EntitySet="my_aspnet_membership" />
+      <End Role="abonnesdbs" EntitySet="abonnesdbs" />
+    </AssociationSet>
+    <AssociationSet Name="commentsdbs_ibfk_1" Association="MySQLModel.commentsdbs_ibfk_1">
+      <End Role="messagesdbs" EntitySet="messagesdbs" />
+      <End Role="commentsdbs" EntitySet="commentsdbs" />
+    </AssociationSet>
+    <AssociationSet Name="commentsdbs_ibfk_2" Association="MySQLModel.commentsdbs_ibfk_2">
+      <End Role="my_aspnet_membership" EntitySet="my_aspnet_membership" />
+      <End Role="commentsdbs" EntitySet="commentsdbs" />
+    </AssociationSet>
+    <AssociationSet Name="likesdbs_ibfk_1" Association="MySQLModel.likesdbs_ibfk_1">
+      <End Role="messagesdbs" EntitySet="messagesdbs" />
+      <End Role="likesdbs" EntitySet="likesdbs" />
+    </AssociationSet>
+    <AssociationSet Name="likesdbs_ibfk_2" Association="MySQLModel.likesdbs_ibfk_2">
+      <End Role="my_aspnet_membership" EntitySet="my_aspnet_membership" />
+      <End Role="likesdbs" EntitySet="likesdbs" />
+    </AssociationSet>
+    <AssociationSet Name="messagesdbs_ibfk_1" Association="MySQLModel.messagesdbs_ibfk_1">
+      <End Role="my_aspnet_membership" EntitySet="my_aspnet_membership" />
+      <End Role="messagesdbs" EntitySet="messagesdbs" />
+    </AssociationSet>
+    <AssociationSet Name="messagesdbs_ibfk_2" Association="MySQLModel.messagesdbs_ibfk_2">
+      <End Role="themesdbs" EntitySet="themesdbs" />
+      <End Role="messagesdbs" EntitySet="messagesdbs" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="abonnesdbs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="theme" Type="Int32" Nullable="false" />
+    <Property Name="user" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="themesdbs" Relationship="MySQLModel.abonnesdbs_ibfk_1" FromRole="abonnesdbs" ToRole="themesdbs" />
+    <NavigationProperty Name="my_aspnet_membership" Relationship="MySQLModel.abonnesdbs_ibfk_2" FromRole="abonnesdbs" ToRole="my_aspnet_membership" />
+  </EntityType>
+  <EntityType Name="commentsdbs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="messageId" Type="Int32" Nullable="false" />
+    <Property Name="author" Type="Int32" Nullable="false" />
+    <Property Name="content" Type="String" Nullable="false" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="messagesdbs" Relationship="MySQLModel.commentsdbs_ibfk_1" FromRole="commentsdbs" ToRole="messagesdbs" />
+    <NavigationProperty Name="my_aspnet_membership" Relationship="MySQLModel.commentsdbs_ibfk_2" FromRole="commentsdbs" ToRole="my_aspnet_membership" />
+  </EntityType>
+  <EntityType Name="likesdbs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="messageApproved" Type="Int32" Nullable="false" />
+    <Property Name="liker" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="messagesdbs" Relationship="MySQLModel.likesdbs_ibfk_1" FromRole="likesdbs" ToRole="messagesdbs" />
+    <NavigationProperty Name="my_aspnet_membership" Relationship="MySQLModel.likesdbs_ibfk_2" FromRole="likesdbs" ToRole="my_aspnet_membership" />
+  </EntityType>
+  <EntityType Name="messagesdbs">
+    <Key>
+      <PropertyRef Name="messageID" />
+    </Key>
+    <Property Name="messageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="date" Type="DateTime" Nullable="false" />
+    <Property Name="author" Type="Int32" Nullable="false" />
+    <Property Name="content" Type="String" Nullable="false" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="theme" Type="Int32" />
+    <Property Name="censored" Type="Int32" Nullable="false" />
+    <Property Name="important" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="commentsdbs" Relationship="MySQLModel.commentsdbs_ibfk_1" FromRole="messagesdbs" ToRole="commentsdbs" />
+    <NavigationProperty Name="likesdbs" Relationship="MySQLModel.likesdbs_ibfk_1" FromRole="messagesdbs" ToRole="likesdbs" />
+    <NavigationProperty Name="my_aspnet_membership" Relationship="MySQLModel.messagesdbs_ibfk_1" FromRole="messagesdbs" ToRole="my_aspnet_membership" />
+    <NavigationProperty Name="themesdbs" Relationship="MySQLModel.messagesdbs_ibfk_2" FromRole="messagesdbs" ToRole="themesdbs" />
+  </EntityType>
+  <EntityType Name="my_aspnet_applications">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="256" Unicode="false" FixedLength="false" />
+    <Property Name="description" Type="String" MaxLength="256" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="my_aspnet_membership">
+    <Key>
+      <PropertyRef Name="userId" />
+    </Key>
+    <Property Name="userId" Type="Int32" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="Comment" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="PasswordKey" Type="String" MaxLength="32" Unicode="false" FixedLength="false" />
+    <Property Name="PasswordFormat" Type="SByte" />
+    <Property Name="PasswordQuestion" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="PasswordAnswer" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="IsApproved" Type="Boolean" />
+    <Property Name="LastActivityDate" Type="DateTime" />
+    <Property Name="LastLoginDate" Type="DateTime" />
+    <Property Name="LastPasswordChangedDate" Type="DateTime" />
+    <Property Name="CreationDate" Type="DateTime" />
+    <Property Name="IsLockedOut" Type="Boolean" />
+    <Property Name="LastLockedOutDate" Type="DateTime" />
+    <Property Name="FailedPasswordAttemptCount" Type="Int64" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="DateTime" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="Int64" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="DateTime" />
+    <NavigationProperty Name="abonnesdbs" Relationship="MySQLModel.abonnesdbs_ibfk_2" FromRole="my_aspnet_membership" ToRole="abonnesdbs" />
+    <NavigationProperty Name="commentsdbs" Relationship="MySQLModel.commentsdbs_ibfk_2" FromRole="my_aspnet_membership" ToRole="commentsdbs" />
+    <NavigationProperty Name="likesdbs" Relationship="MySQLModel.likesdbs_ibfk_2" FromRole="my_aspnet_membership" ToRole="likesdbs" />
+    <NavigationProperty Name="messagesdbs" Relationship="MySQLModel.messagesdbs_ibfk_1" FromRole="my_aspnet_membership" ToRole="messagesdbs" />
+  </EntityType>
+  <EntityType Name="my_aspnet_profiles">
+    <Key>
+      <PropertyRef Name="userId" />
+    </Key>
+    <Property Name="userId" Type="Int32" Nullable="false" />
+    <Property Name="valueindex" Type="String" MaxLength="1073741823" Unicode="false" FixedLength="false" />
+    <Property Name="stringdata" Type="String" MaxLength="1073741823" Unicode="false" FixedLength="false" />
+    <Property Name="binarydata" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="my_aspnet_roles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="applicationId" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="my_aspnet_sessioncleanup">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="LastRun" Type="DateTime" Nullable="false" />
+    <Property Name="IntervalMinutes" Type="Int32" Nullable="false" />
+    <Property Name="ApplicationId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="my_aspnet_sessions">
+    <Key>
+      <PropertyRef Name="SessionId" />
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="SessionId" Type="String" Nullable="false" MaxLength="191" Unicode="false" FixedLength="false" />
+    <Property Name="ApplicationId" Type="Int32" Nullable="false" />
+    <Property Name="Created" Type="DateTime" Nullable="false" />
+    <Property Name="Expires" Type="DateTime" Nullable="false" />
+    <Property Name="LockDate" Type="DateTime" Nullable="false" />
+    <Property Name="LockId" Type="Int32" Nullable="false" />
+    <Property Name="Timeout" Type="Int32" Nullable="false" />
+    <Property Name="Locked" Type="Boolean" Nullable="false" />
+    <Property Name="SessionItems" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Flags" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="my_aspnet_users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="applicationId" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="256" Unicode="false" FixedLength="false" />
+    <Property Name="isAnonymous" Type="Boolean" Nullable="false" />
+    <Property Name="lastActivityDate" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="my_aspnet_usersinroles">
+    <Key>
+      <PropertyRef Name="userId" />
+      <PropertyRef Name="roleId" />
+    </Key>
+    <Property Name="userId" Type="Int32" Nullable="false" />
+    <Property Name="roleId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="themesdbs">
+    <Key>
+      <PropertyRef Name="themeId" />
+    </Key>
+    <Property Name="themeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="abonnesdbs" Relationship="MySQLModel.abonnesdbs_ibfk_1" FromRole="themesdbs" ToRole="abonnesdbs" />
+    <NavigationProperty Name="messagesdbs" Relationship="MySQLModel.messagesdbs_ibfk_2" FromRole="themesdbs" ToRole="messagesdbs" />
+  </EntityType>
+  <Association Name="abonnesdbs_ibfk_1">
+    <End Role="themesdbs" Type="MySQLModel.themesdbs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="abonnesdbs" Type="MySQLModel.abonnesdbs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="themesdbs">
+        <PropertyRef Name="themeId" />
+      </Principal>
+      <Dependent Role="abonnesdbs">
+        <PropertyRef Name="theme" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="abonnesdbs_ibfk_2">
+    <End Role="my_aspnet_membership" Type="MySQLModel.my_aspnet_membership" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="abonnesdbs" Type="MySQLModel.abonnesdbs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="my_aspnet_membership">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="abonnesdbs">
+        <PropertyRef Name="user" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="commentsdbs_ibfk_1">
+    <End Role="messagesdbs" Type="MySQLModel.messagesdbs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="commentsdbs" Type="MySQLModel.commentsdbs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="messagesdbs">
+        <PropertyRef Name="messageID" />
+      </Principal>
+      <Dependent Role="commentsdbs">
+        <PropertyRef Name="messageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="commentsdbs_ibfk_2">
+    <End Role="my_aspnet_membership" Type="MySQLModel.my_aspnet_membership" Multiplicity="1" />
+    <End Role="commentsdbs" Type="MySQLModel.commentsdbs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="my_aspnet_membership">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="commentsdbs">
+        <PropertyRef Name="author" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="likesdbs_ibfk_1">
+    <End Role="messagesdbs" Type="MySQLModel.messagesdbs" Multiplicity="1" />
+    <End Role="likesdbs" Type="MySQLModel.likesdbs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="messagesdbs">
+        <PropertyRef Name="messageID" />
+      </Principal>
+      <Dependent Role="likesdbs">
+        <PropertyRef Name="messageApproved" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="likesdbs_ibfk_2">
+    <End Role="my_aspnet_membership" Type="MySQLModel.my_aspnet_membership" Multiplicity="1" />
+    <End Role="likesdbs" Type="MySQLModel.likesdbs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="my_aspnet_membership">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="likesdbs">
+        <PropertyRef Name="liker" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="messagesdbs_ibfk_1">
+    <End Role="my_aspnet_membership" Type="MySQLModel.my_aspnet_membership" Multiplicity="1" />
+    <End Role="messagesdbs" Type="MySQLModel.messagesdbs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="my_aspnet_membership">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="messagesdbs">
+        <PropertyRef Name="author" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="messagesdbs_ibfk_2">
+    <End Role="themesdbs" Type="MySQLModel.themesdbs" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="messagesdbs" Type="MySQLModel.messagesdbs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="themesdbs">
+        <PropertyRef Name="themeId" />
+      </Principal>
+      <Dependent Role="messagesdbs">
+        <PropertyRef Name="theme" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

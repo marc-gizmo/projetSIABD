@@ -1,0 +1,8 @@
+c:\users\marc\documents\visual studio 2010\Projects\SIABDtest\SIABDtest.Tests\bin\Debug\SIABDtest.Tests.dll.config
+c:\users\marc\documents\visual studio 2010\Projects\SIABDtest\SIABDtest.Tests\bin\Debug\SIABDtest.Tests.dll
+c:\users\marc\documents\visual studio 2010\Projects\SIABDtest\SIABDtest.Tests\bin\Debug\SIABDtest.Tests.pdb
+c:\users\marc\documents\visual studio 2010\Projects\SIABDtest\SIABDtest.Tests\bin\Debug\SIABDtest.dll
+c:\users\marc\documents\visual studio 2010\Projects\SIABDtest\SIABDtest.Tests\bin\Debug\SIABDtest.pdb
+c:\users\marc\documents\visual studio 2010\Projects\SIABDtest\SIABDtest.Tests\obj\Debug\SIABDtest.Tests.csprojResolveAssemblyReference.cache
+c:\users\marc\documents\visual studio 2010\Projects\SIABDtest\SIABDtest.Tests\obj\Debug\SIABDtest.Tests.dll
+c:\users\marc\documents\visual studio 2010\Projects\SIABDtest\SIABDtest.Tests\obj\Debug\SIABDtest.Tests.pdb
