@@ -7,7 +7,7 @@
 <asp:Content ID="loginContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Ouverture de session</h2>
     <p>
-        Entrez un nom d'utilisateur et un mot de passe.
+        Vous n'êtes pas connecté ou vous n'avez pas les autorisations nécessaires pour accéder à cette page.
     </p>
 
     <% using (Html.BeginForm()) { %>

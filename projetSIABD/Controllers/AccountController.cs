@@ -114,14 +114,14 @@ namespace projetSIABD.Controllers
         // URL: /Account/ChangePassword
         // **************************************
 
-        [Authorize]
+        [Authorize()]
         public ActionResult ChangePassword()
         {
             ViewData["PasswordLength"] = MembershipService.MinPasswordLength;
             return View();
         }
 
-        [Authorize]
+        [Authorize()]
         [HttpPost]
         public ActionResult ChangePassword(ChangePasswordModel model)
         {
