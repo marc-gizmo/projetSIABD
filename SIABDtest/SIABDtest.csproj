@@ -77,6 +77,7 @@
     <Compile Include="Controllers\LikeController.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\ThemesController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
@@ -120,6 +121,7 @@
     <Content Include="Views\Roles\Delete.aspx" />
     <Content Include="Views\Roles\DeleteUser.aspx" />
     <Content Include="Views\Roles\Index.aspx" />
+    <Content Include="Views\Test\Index.aspx" />
     <Content Include="Views\Themes\Index.aspx" />
     <Content Include="Views\User\Create.aspx" />
     <Content Include="Views\User\Delete.aspx" />
@@ -165,6 +167,10 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>MySQLModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

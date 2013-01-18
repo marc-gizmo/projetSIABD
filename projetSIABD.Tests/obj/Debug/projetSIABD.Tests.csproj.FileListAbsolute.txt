@@ -1,0 +1,8 @@
+C:\Users\Emmanuel\Desktop\siabd\projet\projetSIABD\projetSIABD.Tests\bin\Debug\projetSIABD.Tests.dll.config
+C:\Users\Emmanuel\Desktop\siabd\projet\projetSIABD\projetSIABD.Tests\bin\Debug\projetSIABD.Tests.dll
+C:\Users\Emmanuel\Desktop\siabd\projet\projetSIABD\projetSIABD.Tests\bin\Debug\projetSIABD.Tests.pdb
+C:\Users\Emmanuel\Desktop\siabd\projet\projetSIABD\projetSIABD.Tests\bin\Debug\projetSIABD.dll
+C:\Users\Emmanuel\Desktop\siabd\projet\projetSIABD\projetSIABD.Tests\bin\Debug\projetSIABD.pdb
+C:\Users\Emmanuel\Desktop\siabd\projet\projetSIABD\projetSIABD.Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Emmanuel\Desktop\siabd\projet\projetSIABD\projetSIABD.Tests\obj\Debug\projetSIABD.Tests.dll
+C:\Users\Emmanuel\Desktop\siabd\projet\projetSIABD\projetSIABD.Tests\obj\Debug\projetSIABD.Tests.pdb

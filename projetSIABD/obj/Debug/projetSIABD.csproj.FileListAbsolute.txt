@@ -1,0 +1,10 @@
+C:\Users\Emmanuel\Desktop\siabd\projet\projetSIABD\projetSIABD\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Emmanuel\Desktop\siabd\projet\projetSIABD\projetSIABD\bin\projetSIABD.dll
+C:\Users\Emmanuel\Desktop\siabd\projet\projetSIABD\projetSIABD\bin\projetSIABD.pdb
+C:\Users\Emmanuel\Desktop\siabd\projet\projetSIABD\projetSIABD\obj\Debug\projetSIABD.dll
+C:\Users\Emmanuel\Desktop\siabd\projet\projetSIABD\projetSIABD\obj\Debug\projetSIABD.pdb
+C:\Users\Marc\Documents\Visual Studio 2010\Projects\projetSIABD\projetSIABD\bin\projetSIABD.dll
+C:\Users\Marc\Documents\Visual Studio 2010\Projects\projetSIABD\projetSIABD\bin\projetSIABD.pdb
+C:\Users\Marc\Documents\Visual Studio 2010\Projects\projetSIABD\projetSIABD\obj\Debug\projetSIABD.csprojResolveAssemblyReference.cache
+C:\Users\Marc\Documents\Visual Studio 2010\Projects\projetSIABD\projetSIABD\obj\Debug\projetSIABD.dll
+C:\Users\Marc\Documents\Visual Studio 2010\Projects\projetSIABD\projetSIABD\obj\Debug\projetSIABD.pdb

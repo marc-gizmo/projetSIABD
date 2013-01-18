@@ -1,0 +1,579 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="7ef7a999-3a25-4e0e-9b18-d4779178489d" name="Emmanuel@EMMANUEL-PC 2013-01-12 19:29:23" runUser="Emmanuel-PC\Emmanuel" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Paramètres de test par défaut" id="730c1480-6357-44e9-a3b1-25f473fbe091">
+    <Deployment runDeploymentRoot="Emmanuel_EMMANUEL-PC 2013-01-12 19_29_23">
+      <DeploymentItem filename="C:\Users\Emmanuel\Desktop\siabd\projet\projetSIABD\projetSIABD\bin\projetSIABD.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-01-12T19:29:23.0270347+01:00" queuing="2013-01-12T19:29:23.8230803+01:00" start="2013-01-12T19:29:23.8840838+01:00" finish="2013-01-12T19:29:25.1371554+01:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="17" executed="17" error="0" failed="17" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <DebugTrace>E, 10236, 13, 2013/01/12, 19:29:24.751, EMMANUEL-PC\QTAgent32.exe, Unit Test Executor threw an exception. Most likely the test run was aborted by the user or the framework:System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+E, 10236, 13, 2013/01/12, 19:29:24.756, EMMANUEL-PC\QTAgent32.exe, Unit Test Adapter threw exception: System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestRunner.Run(UnitTestElement test, ITestContext testContext, Boolean isLoadTest, Boolean useMultipleCpus)
+E, 10236, 18, 2013/01/12, 19:29:24.816, EMMANUEL-PC\QTAgent32.exe, Unit Test Executor threw an exception. Most likely the test run was aborted by the user or the framework:System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+E, 10236, 18, 2013/01/12, 19:29:24.819, EMMANUEL-PC\QTAgent32.exe, Unit Test Adapter threw exception: System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestRunner.Run(UnitTestElement test, ITestContext testContext, Boolean isLoadTest, Boolean useMultipleCpus)
+E, 10236, 20, 2013/01/12, 19:29:24.839, EMMANUEL-PC\QTAgent32.exe, Unit Test Executor threw an exception. Most likely the test run was aborted by the user or the framework:System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+E, 10236, 20, 2013/01/12, 19:29:24.843, EMMANUEL-PC\QTAgent32.exe, Unit Test Adapter threw exception: System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestRunner.Run(UnitTestElement test, ITestContext testContext, Boolean isLoadTest, Boolean useMultipleCpus)
+E, 10236, 22, 2013/01/12, 19:29:24.865, EMMANUEL-PC\QTAgent32.exe, Unit Test Executor threw an exception. Most likely the test run was aborted by the user or the framework:System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+E, 10236, 22, 2013/01/12, 19:29:24.868, EMMANUEL-PC\QTAgent32.exe, Unit Test Adapter threw exception: System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestRunner.Run(UnitTestElement test, ITestContext testContext, Boolean isLoadTest, Boolean useMultipleCpus)
+E, 10236, 24, 2013/01/12, 19:29:24.888, EMMANUEL-PC\QTAgent32.exe, Unit Test Executor threw an exception. Most likely the test run was aborted by the user or the framework:System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+E, 10236, 24, 2013/01/12, 19:29:24.891, EMMANUEL-PC\QTAgent32.exe, Unit Test Adapter threw exception: System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestRunner.Run(UnitTestElement test, ITestContext testContext, Boolean isLoadTest, Boolean useMultipleCpus)
+E, 10236, 26, 2013/01/12, 19:29:24.906, EMMANUEL-PC\QTAgent32.exe, Unit Test Executor threw an exception. Most likely the test run was aborted by the user or the framework:System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+E, 10236, 26, 2013/01/12, 19:29:24.909, EMMANUEL-PC\QTAgent32.exe, Unit Test Adapter threw exception: System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestRunner.Run(UnitTestElement test, ITestContext testContext, Boolean isLoadTest, Boolean useMultipleCpus)
+E, 10236, 28, 2013/01/12, 19:29:24.923, EMMANUEL-PC\QTAgent32.exe, Unit Test Executor threw an exception. Most likely the test run was aborted by the user or the framework:System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+E, 10236, 28, 2013/01/12, 19:29:24.927, EMMANUEL-PC\QTAgent32.exe, Unit Test Adapter threw exception: System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestRunner.Run(UnitTestElement test, ITestContext testContext, Boolean isLoadTest, Boolean useMultipleCpus)
+E, 10236, 30, 2013/01/12, 19:29:24.941, EMMANUEL-PC\QTAgent32.exe, Unit Test Executor threw an exception. Most likely the test run was aborted by the user or the framework:System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+E, 10236, 30, 2013/01/12, 19:29:24.944, EMMANUEL-PC\QTAgent32.exe, Unit Test Adapter threw exception: System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestRunner.Run(UnitTestElement test, ITestContext testContext, Boolean isLoadTest, Boolean useMultipleCpus)
+E, 10236, 32, 2013/01/12, 19:29:24.959, EMMANUEL-PC\QTAgent32.exe, Unit Test Executor threw an exception. Most likely the test run was aborted by the user or the framework:System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+E, 10236, 32, 2013/01/12, 19:29:24.962, EMMANUEL-PC\QTAgent32.exe, Unit Test Adapter threw exception: System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestRunner.Run(UnitTestElement test, ITestContext testContext, Boolean isLoadTest, Boolean useMultipleCpus)
+E, 10236, 34, 2013/01/12, 19:29:24.978, EMMANUEL-PC\QTAgent32.exe, Unit Test Executor threw an exception. Most likely the test run was aborted by the user or the framework:System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+E, 10236, 34, 2013/01/12, 19:29:24.981, EMMANUEL-PC\QTAgent32.exe, Unit Test Adapter threw exception: System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestRunner.Run(UnitTestElement test, ITestContext testContext, Boolean isLoadTest, Boolean useMultipleCpus)
+E, 10236, 36, 2013/01/12, 19:29:24.996, EMMANUEL-PC\QTAgent32.exe, Unit Test Executor threw an exception. Most likely the test run was aborted by the user or the framework:System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+E, 10236, 36, 2013/01/12, 19:29:24.999, EMMANUEL-PC\QTAgent32.exe, Unit Test Adapter threw exception: System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestRunner.Run(UnitTestElement test, ITestContext testContext, Boolean isLoadTest, Boolean useMultipleCpus)
+E, 10236, 38, 2013/01/12, 19:29:25.014, EMMANUEL-PC\QTAgent32.exe, Unit Test Executor threw an exception. Most likely the test run was aborted by the user or the framework:System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+E, 10236, 38, 2013/01/12, 19:29:25.017, EMMANUEL-PC\QTAgent32.exe, Unit Test Adapter threw exception: System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestRunner.Run(UnitTestElement test, ITestContext testContext, Boolean isLoadTest, Boolean useMultipleCpus)
+E, 10236, 40, 2013/01/12, 19:29:25.032, EMMANUEL-PC\QTAgent32.exe, Unit Test Executor threw an exception. Most likely the test run was aborted by the user or the framework:System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+E, 10236, 40, 2013/01/12, 19:29:25.035, EMMANUEL-PC\QTAgent32.exe, Unit Test Adapter threw exception: System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestRunner.Run(UnitTestElement test, ITestContext testContext, Boolean isLoadTest, Boolean useMultipleCpus)
+E, 10236, 42, 2013/01/12, 19:29:25.049, EMMANUEL-PC\QTAgent32.exe, Unit Test Executor threw an exception. Most likely the test run was aborted by the user or the framework:System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+E, 10236, 42, 2013/01/12, 19:29:25.052, EMMANUEL-PC\QTAgent32.exe, Unit Test Adapter threw exception: System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestRunner.Run(UnitTestElement test, ITestContext testContext, Boolean isLoadTest, Boolean useMultipleCpus)
+E, 10236, 44, 2013/01/12, 19:29:25.066, EMMANUEL-PC\QTAgent32.exe, Unit Test Executor threw an exception. Most likely the test run was aborted by the user or the framework:System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+E, 10236, 44, 2013/01/12, 19:29:25.069, EMMANUEL-PC\QTAgent32.exe, Unit Test Adapter threw exception: System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestRunner.Run(UnitTestElement test, ITestContext testContext, Boolean isLoadTest, Boolean useMultipleCpus)
+E, 10236, 46, 2013/01/12, 19:29:25.082, EMMANUEL-PC\QTAgent32.exe, Unit Test Executor threw an exception. Most likely the test run was aborted by the user or the framework:System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+E, 10236, 46, 2013/01/12, 19:29:25.086, EMMANUEL-PC\QTAgent32.exe, Unit Test Adapter threw exception: System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestRunner.Run(UnitTestElement test, ITestContext testContext, Boolean isLoadTest, Boolean useMultipleCpus)
+E, 10236, 48, 2013/01/12, 19:29:25.099, EMMANUEL-PC\QTAgent32.exe, Unit Test Executor threw an exception. Most likely the test run was aborted by the user or the framework:System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+E, 10236, 48, 2013/01/12, 19:29:25.102, EMMANUEL-PC\QTAgent32.exe, Unit Test Adapter threw exception: System.Reflection.ReflectionTypeLoadException: Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations.
+   à System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   à System.Reflection.RuntimeModule.GetTypes()
+   à System.Reflection.Assembly.GetTypes()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetAssemblyInfo(Assembly assembly)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type, Boolean checkAlreadyExaminedType)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetTypeInfo(Type type)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods()
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.Initialize(UnitTestResult result, UnitTestRunner runner, ConsoleOutputRedirector redirector)
+   à Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestRunner.Run(UnitTestElement test, ITestContext testContext, Boolean isLoadTest, Boolean useMultipleCpus)
+</DebugTrace>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="EMMANUEL-PC" outcome="Warning" timestamp="2013-01-12T19:29:23.0930385+01:00">
+        <Text>Avertissement : conflit lors du déploiement de la série de tests : élément de déploiement 'c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetSIABD.dll' référencé directement ou indirectement par le conteneur de test 'c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll' ne peut pas être déployé sur 'projetSIABD.dll' sans quoi le fichier 'c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetSIABD.dll' remplacerait élément de déploiement 'C:\Users\Emmanuel\Desktop\siabd\projet\projetSIABD\projetSIABD\bin\projetSIABD.dll' référencé directement ou indirectement par C:\Users\Emmanuel\Desktop\siabd\projet\projetSIABD\projetSIABD.Tests\bin\Debug\projetSIABD.Tests.dll.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Register_Post_ReturnsViewIfModelStateIsInvalid" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="b0e15bb5-66eb-1e24-6ae3-55f2dc425e75">
+      <Execution id="4b3f881e-99d1-4b7e-a36a-7111f15efa80" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Register_Post_ReturnsViewIfModelStateIsInvalid" />
+    </UnitTest>
+    <UnitTest name="Register_Get_ReturnsView" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="a41d7477-b448-cf21-9d1b-32930fd14623">
+      <Execution id="6a009289-6010-48a9-851a-766351061ca4" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Register_Get_ReturnsView" />
+    </UnitTest>
+    <UnitTest name="ChangePassword_Post_ReturnsViewIfModelStateIsInvalid" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="9ad0fbbf-2966-36c0-0bae-d70e8c8655e6">
+      <Execution id="8b617367-5723-4cf1-8fda-928a19705a62" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChangePassword_Post_ReturnsViewIfModelStateIsInvalid" />
+    </UnitTest>
+    <UnitTest name="Register_Post_ReturnsRedirectOnSuccess" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="50136e7f-047e-2233-eda8-527ac172e89b">
+      <Execution id="e4bcf698-277f-4571-ba9e-945b3ac40fe0" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Register_Post_ReturnsRedirectOnSuccess" />
+    </UnitTest>
+    <UnitTest name="LogOn_Get_ReturnsView" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="5ee921fc-a044-8942-f86f-77749095dc40">
+      <Execution id="0e0e65d1-a7b5-4f25-a559-3d0af78b06a5" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn_Get_ReturnsView" />
+    </UnitTest>
+    <UnitTest name="Index" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="5dd20394-cfe9-ad1e-4792-410aa2308cfa">
+      <Execution id="695d7365-88be-46f5-930c-28287c25e8a7" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.HomeControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index" />
+    </UnitTest>
+    <UnitTest name="ChangePassword_Post_ReturnsRedirectOnSuccess" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="336cb6a4-0825-a5b7-4a68-fc0aaa045ff4">
+      <Execution id="70e3c8a0-b3d3-4b44-9d13-fd52131d57e9" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChangePassword_Post_ReturnsRedirectOnSuccess" />
+    </UnitTest>
+    <UnitTest name="LogOn_Post_ReturnsViewIfValidateUserFails" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="ac0f042e-ae9a-2786-6a9a-3630e0ca324a">
+      <Execution id="aef652a7-400c-4d49-aeea-c112ed94d41a" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn_Post_ReturnsViewIfValidateUserFails" />
+    </UnitTest>
+    <UnitTest name="Register_Post_ReturnsViewIfRegistrationFails" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="3d77df01-c586-fe40-f81d-e8a328cce2eb">
+      <Execution id="7b96aa6a-2b93-4c66-8d79-77b367fa8a58" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Register_Post_ReturnsViewIfRegistrationFails" />
+    </UnitTest>
+    <UnitTest name="LogOff_LogsOutAndRedirects" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="0bd9dd26-3e93-03dc-8a0b-f43c075d2a6a">
+      <Execution id="9c8c965b-22e1-418f-9c57-98abae0e7d42" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOff_LogsOutAndRedirects" />
+    </UnitTest>
+    <UnitTest name="About" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="175d46b5-0796-765b-5032-96984d333ae4">
+      <Execution id="2a284855-938d-4b58-93fc-af6c8a775c9b" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.HomeControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="About" />
+    </UnitTest>
+    <UnitTest name="ChangePasswordSuccess_ReturnsView" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="c3807333-c314-95de-3881-b87e1f746813">
+      <Execution id="4d3965ec-2005-4537-a971-be100440b214" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChangePasswordSuccess_ReturnsView" />
+    </UnitTest>
+    <UnitTest name="ChangePassword_Get_ReturnsView" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="5ba04fc7-1450-1b69-1318-c8c65d226fb5">
+      <Execution id="0dcd47e4-72a7-41fe-894d-c4615d224507" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChangePassword_Get_ReturnsView" />
+    </UnitTest>
+    <UnitTest name="ChangePassword_Post_ReturnsViewIfChangePasswordFails" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="3222c9d7-01ab-b77a-f609-93c94ea34946">
+      <Execution id="9f3f35d8-f95f-49d8-a4e0-82a771623539" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChangePassword_Post_ReturnsViewIfChangePasswordFails" />
+    </UnitTest>
+    <UnitTest name="LogOn_Post_ReturnsRedirectOnSuccess_WithReturnUrl" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="4fa759ec-98e7-c948-1855-d039d31c55de">
+      <Execution id="84b42b0a-6871-4ffb-86e3-809b5b5c207c" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn_Post_ReturnsRedirectOnSuccess_WithReturnUrl" />
+    </UnitTest>
+    <UnitTest name="LogOn_Post_ReturnsViewIfModelStateIsInvalid" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="417dc34d-b47d-345c-6ce8-4fad596356b2">
+      <Execution id="a998251c-6fdb-457e-9563-2288c382600a" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn_Post_ReturnsViewIfModelStateIsInvalid" />
+    </UnitTest>
+    <UnitTest name="LogOn_Post_ReturnsRedirectOnSuccess_WithoutReturnUrl" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="b62c31e1-1c69-bc90-7826-1f029851c6d0">
+      <Execution id="6ca08067-611e-4bb9-afc8-6f3884c70d31" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn_Post_ReturnsRedirectOnSuccess_WithoutReturnUrl" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Les résultats ne figurent pas dans une liste" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Tous les résultats chargés" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="5dd20394-cfe9-ad1e-4792-410aa2308cfa" executionId="695d7365-88be-46f5-930c-28287c25e8a7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="175d46b5-0796-765b-5032-96984d333ae4" executionId="2a284855-938d-4b58-93fc-af6c8a775c9b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5ba04fc7-1450-1b69-1318-c8c65d226fb5" executionId="0dcd47e4-72a7-41fe-894d-c4615d224507" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="336cb6a4-0825-a5b7-4a68-fc0aaa045ff4" executionId="70e3c8a0-b3d3-4b44-9d13-fd52131d57e9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3222c9d7-01ab-b77a-f609-93c94ea34946" executionId="9f3f35d8-f95f-49d8-a4e0-82a771623539" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9ad0fbbf-2966-36c0-0bae-d70e8c8655e6" executionId="8b617367-5723-4cf1-8fda-928a19705a62" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c3807333-c314-95de-3881-b87e1f746813" executionId="4d3965ec-2005-4537-a971-be100440b214" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0bd9dd26-3e93-03dc-8a0b-f43c075d2a6a" executionId="9c8c965b-22e1-418f-9c57-98abae0e7d42" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5ee921fc-a044-8942-f86f-77749095dc40" executionId="0e0e65d1-a7b5-4f25-a559-3d0af78b06a5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b62c31e1-1c69-bc90-7826-1f029851c6d0" executionId="6ca08067-611e-4bb9-afc8-6f3884c70d31" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4fa759ec-98e7-c948-1855-d039d31c55de" executionId="84b42b0a-6871-4ffb-86e3-809b5b5c207c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="417dc34d-b47d-345c-6ce8-4fad596356b2" executionId="a998251c-6fdb-457e-9563-2288c382600a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ac0f042e-ae9a-2786-6a9a-3630e0ca324a" executionId="aef652a7-400c-4d49-aeea-c112ed94d41a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a41d7477-b448-cf21-9d1b-32930fd14623" executionId="6a009289-6010-48a9-851a-766351061ca4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="50136e7f-047e-2233-eda8-527ac172e89b" executionId="e4bcf698-277f-4571-ba9e-945b3ac40fe0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3d77df01-c586-fe40-f81d-e8a328cce2eb" executionId="7b96aa6a-2b93-4c66-8d79-77b367fa8a58" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b0e15bb5-66eb-1e24-6ae3-55f2dc425e75" executionId="4b3f881e-99d1-4b7e-a36a-7111f15efa80" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="695d7365-88be-46f5-930c-28287c25e8a7" testId="5dd20394-cfe9-ad1e-4792-410aa2308cfa" testName="Index" computerName="EMMANUEL-PC" startTime="2013-01-12T19:29:23.9280863+01:00" endTime="2013-01-12T19:29:24.8051364+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="695d7365-88be-46f5-930c-28287c25e8a7">
+      <Output>
+        <ErrorInfo>
+          <Message>L'adaptateur de test unitaire a levé une exception : 
+Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2a284855-938d-4b58-93fc-af6c8a775c9b" testId="175d46b5-0796-765b-5032-96984d333ae4" testName="About" computerName="EMMANUEL-PC" startTime="2013-01-12T19:29:24.8081366+01:00" endTime="2013-01-12T19:29:24.8241375+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2a284855-938d-4b58-93fc-af6c8a775c9b">
+      <Output>
+        <ErrorInfo>
+          <Message>L'adaptateur de test unitaire a levé une exception : 
+Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0dcd47e4-72a7-41fe-894d-c4615d224507" testId="5ba04fc7-1450-1b69-1318-c8c65d226fb5" testName="ChangePassword_Get_ReturnsView" computerName="EMMANUEL-PC" startTime="2013-01-12T19:29:24.8321380+01:00" endTime="2013-01-12T19:29:24.8471388+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0dcd47e4-72a7-41fe-894d-c4615d224507">
+      <Output>
+        <ErrorInfo>
+          <Message>L'adaptateur de test unitaire a levé une exception : 
+Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="70e3c8a0-b3d3-4b44-9d13-fd52131d57e9" testId="336cb6a4-0825-a5b7-4a68-fc0aaa045ff4" testName="ChangePassword_Post_ReturnsRedirectOnSuccess" computerName="EMMANUEL-PC" startTime="2013-01-12T19:29:24.8571394+01:00" endTime="2013-01-12T19:29:24.8721403+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="70e3c8a0-b3d3-4b44-9d13-fd52131d57e9">
+      <Output>
+        <ErrorInfo>
+          <Message>L'adaptateur de test unitaire a levé une exception : 
+Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9f3f35d8-f95f-49d8-a4e0-82a771623539" testId="3222c9d7-01ab-b77a-f609-93c94ea34946" testName="ChangePassword_Post_ReturnsViewIfChangePasswordFails" computerName="EMMANUEL-PC" startTime="2013-01-12T19:29:24.8811408+01:00" endTime="2013-01-12T19:29:24.8951416+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9f3f35d8-f95f-49d8-a4e0-82a771623539">
+      <Output>
+        <ErrorInfo>
+          <Message>L'adaptateur de test unitaire a levé une exception : 
+Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8b617367-5723-4cf1-8fda-928a19705a62" testId="9ad0fbbf-2966-36c0-0bae-d70e8c8655e6" testName="ChangePassword_Post_ReturnsViewIfModelStateIsInvalid" computerName="EMMANUEL-PC" startTime="2013-01-12T19:29:24.8991418+01:00" endTime="2013-01-12T19:29:24.9131426+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8b617367-5723-4cf1-8fda-928a19705a62">
+      <Output>
+        <ErrorInfo>
+          <Message>L'adaptateur de test unitaire a levé une exception : 
+Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4d3965ec-2005-4537-a971-be100440b214" testId="c3807333-c314-95de-3881-b87e1f746813" testName="ChangePasswordSuccess_ReturnsView" computerName="EMMANUEL-PC" startTime="2013-01-12T19:29:24.9171428+01:00" endTime="2013-01-12T19:29:24.9301436+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4d3965ec-2005-4537-a971-be100440b214">
+      <Output>
+        <ErrorInfo>
+          <Message>L'adaptateur de test unitaire a levé une exception : 
+Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9c8c965b-22e1-418f-9c57-98abae0e7d42" testId="0bd9dd26-3e93-03dc-8a0b-f43c075d2a6a" testName="LogOff_LogsOutAndRedirects" computerName="EMMANUEL-PC" startTime="2013-01-12T19:29:24.9351439+01:00" endTime="2013-01-12T19:29:24.9491447+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9c8c965b-22e1-418f-9c57-98abae0e7d42">
+      <Output>
+        <ErrorInfo>
+          <Message>L'adaptateur de test unitaire a levé une exception : 
+Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0e0e65d1-a7b5-4f25-a559-3d0af78b06a5" testId="5ee921fc-a044-8942-f86f-77749095dc40" testName="LogOn_Get_ReturnsView" computerName="EMMANUEL-PC" startTime="2013-01-12T19:29:24.9531449+01:00" endTime="2013-01-12T19:29:24.9671457+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0e0e65d1-a7b5-4f25-a559-3d0af78b06a5">
+      <Output>
+        <ErrorInfo>
+          <Message>L'adaptateur de test unitaire a levé une exception : 
+Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6ca08067-611e-4bb9-afc8-6f3884c70d31" testId="b62c31e1-1c69-bc90-7826-1f029851c6d0" testName="LogOn_Post_ReturnsRedirectOnSuccess_WithoutReturnUrl" computerName="EMMANUEL-PC" startTime="2013-01-12T19:29:24.9721460+01:00" endTime="2013-01-12T19:29:24.9861468+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6ca08067-611e-4bb9-afc8-6f3884c70d31">
+      <Output>
+        <ErrorInfo>
+          <Message>L'adaptateur de test unitaire a levé une exception : 
+Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="84b42b0a-6871-4ffb-86e3-809b5b5c207c" testId="4fa759ec-98e7-c948-1855-d039d31c55de" testName="LogOn_Post_ReturnsRedirectOnSuccess_WithReturnUrl" computerName="EMMANUEL-PC" startTime="2013-01-12T19:29:24.9891470+01:00" endTime="2013-01-12T19:29:25.0031478+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="84b42b0a-6871-4ffb-86e3-809b5b5c207c">
+      <Output>
+        <ErrorInfo>
+          <Message>L'adaptateur de test unitaire a levé une exception : 
+Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a998251c-6fdb-457e-9563-2288c382600a" testId="417dc34d-b47d-345c-6ce8-4fad596356b2" testName="LogOn_Post_ReturnsViewIfModelStateIsInvalid" computerName="EMMANUEL-PC" startTime="2013-01-12T19:29:25.0071480+01:00" endTime="2013-01-12T19:29:25.0211488+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a998251c-6fdb-457e-9563-2288c382600a">
+      <Output>
+        <ErrorInfo>
+          <Message>L'adaptateur de test unitaire a levé une exception : 
+Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="aef652a7-400c-4d49-aeea-c112ed94d41a" testId="ac0f042e-ae9a-2786-6a9a-3630e0ca324a" testName="LogOn_Post_ReturnsViewIfValidateUserFails" computerName="EMMANUEL-PC" startTime="2013-01-12T19:29:25.0251490+01:00" endTime="2013-01-12T19:29:25.0381498+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aef652a7-400c-4d49-aeea-c112ed94d41a">
+      <Output>
+        <ErrorInfo>
+          <Message>L'adaptateur de test unitaire a levé une exception : 
+Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6a009289-6010-48a9-851a-766351061ca4" testId="a41d7477-b448-cf21-9d1b-32930fd14623" testName="Register_Get_ReturnsView" computerName="EMMANUEL-PC" startTime="2013-01-12T19:29:25.0421500+01:00" endTime="2013-01-12T19:29:25.0561508+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6a009289-6010-48a9-851a-766351061ca4">
+      <Output>
+        <ErrorInfo>
+          <Message>L'adaptateur de test unitaire a levé une exception : 
+Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e4bcf698-277f-4571-ba9e-945b3ac40fe0" testId="50136e7f-047e-2233-eda8-527ac172e89b" testName="Register_Post_ReturnsRedirectOnSuccess" computerName="EMMANUEL-PC" startTime="2013-01-12T19:29:25.0591510+01:00" endTime="2013-01-12T19:29:25.0731518+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e4bcf698-277f-4571-ba9e-945b3ac40fe0">
+      <Output>
+        <ErrorInfo>
+          <Message>L'adaptateur de test unitaire a levé une exception : 
+Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7b96aa6a-2b93-4c66-8d79-77b367fa8a58" testId="3d77df01-c586-fe40-f81d-e8a328cce2eb" testName="Register_Post_ReturnsViewIfRegistrationFails" computerName="EMMANUEL-PC" startTime="2013-01-12T19:29:25.0761519+01:00" endTime="2013-01-12T19:29:25.0891527+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7b96aa6a-2b93-4c66-8d79-77b367fa8a58">
+      <Output>
+        <ErrorInfo>
+          <Message>L'adaptateur de test unitaire a levé une exception : 
+Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4b3f881e-99d1-4b7e-a36a-7111f15efa80" testId="b0e15bb5-66eb-1e24-6ae3-55f2dc425e75" testName="Register_Post_ReturnsViewIfModelStateIsInvalid" computerName="EMMANUEL-PC" startTime="2013-01-12T19:29:25.0921528+01:00" endTime="2013-01-12T19:29:25.1061536+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4b3f881e-99d1-4b7e-a36a-7111f15efa80">
+      <Output>
+        <ErrorInfo>
+          <Message>L'adaptateur de test unitaire a levé une exception : 
+Impossible de charger un ou plusieurs des types requis. Extrayez la propriété LoaderExceptions pour plus d'informations..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

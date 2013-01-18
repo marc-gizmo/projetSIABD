@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="834e2337-2a60-48ed-b6ce-232ad2b602b8" name="Emmanuel@EMMANUEL-PC 2013-01-10 11:58:10" runUser="Emmanuel-PC\Emmanuel" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Paramètres de test par défaut" id="2c41c96f-90d9-47ba-9b06-cdbc9ba61a53">
+    <Deployment runDeploymentRoot="Emmanuel_EMMANUEL-PC 2013-01-10 11_58_10">
+      <DeploymentItem filename="C:\Users\Emmanuel\Desktop\siabd\projet\projetSIABD\projetSIABD\bin\projetSIABD.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-01-10T11:58:10.6549890+01:00" queuing="2013-01-10T11:58:13.9061749+01:00" start="2013-01-10T11:58:14.0811849+01:00" finish="2013-01-10T11:58:15.7412799+01:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="17" executed="17" passed="17" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Register_Post_ReturnsViewIfModelStateIsInvalid" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="b0e15bb5-66eb-1e24-6ae3-55f2dc425e75">
+      <Execution id="6c2e9961-83c1-4a10-b794-65fa481928f3" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Register_Post_ReturnsViewIfModelStateIsInvalid" />
+    </UnitTest>
+    <UnitTest name="Register_Get_ReturnsView" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="a41d7477-b448-cf21-9d1b-32930fd14623">
+      <Execution id="dee3f8b2-5b2c-4a1a-b7ef-74f394abed98" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Register_Get_ReturnsView" />
+    </UnitTest>
+    <UnitTest name="ChangePassword_Post_ReturnsViewIfModelStateIsInvalid" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="9ad0fbbf-2966-36c0-0bae-d70e8c8655e6">
+      <Execution id="34b9c95e-5e8a-4dd9-9670-7a4c03d3d64b" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChangePassword_Post_ReturnsViewIfModelStateIsInvalid" />
+    </UnitTest>
+    <UnitTest name="Register_Post_ReturnsRedirectOnSuccess" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="50136e7f-047e-2233-eda8-527ac172e89b">
+      <Execution id="43e07acb-df9e-4ce4-9542-c70dcfff15a8" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Register_Post_ReturnsRedirectOnSuccess" />
+    </UnitTest>
+    <UnitTest name="LogOn_Get_ReturnsView" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="5ee921fc-a044-8942-f86f-77749095dc40">
+      <Execution id="1fd63c3c-e53d-4814-93c9-2c6fa39c7885" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn_Get_ReturnsView" />
+    </UnitTest>
+    <UnitTest name="Index" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="5dd20394-cfe9-ad1e-4792-410aa2308cfa">
+      <Execution id="fa6352e9-83b3-4201-b9c3-24f6f4dcc9ff" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.HomeControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index" />
+    </UnitTest>
+    <UnitTest name="ChangePassword_Post_ReturnsRedirectOnSuccess" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="336cb6a4-0825-a5b7-4a68-fc0aaa045ff4">
+      <Execution id="800e971e-a3ab-450f-a8ef-92a8e91b0ce6" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChangePassword_Post_ReturnsRedirectOnSuccess" />
+    </UnitTest>
+    <UnitTest name="LogOn_Post_ReturnsViewIfValidateUserFails" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="ac0f042e-ae9a-2786-6a9a-3630e0ca324a">
+      <Execution id="3bbcaa75-ad45-46b7-bfc6-bbcbfbcd93f2" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn_Post_ReturnsViewIfValidateUserFails" />
+    </UnitTest>
+    <UnitTest name="Register_Post_ReturnsViewIfRegistrationFails" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="3d77df01-c586-fe40-f81d-e8a328cce2eb">
+      <Execution id="4bfd38f4-b041-408b-96b4-843d460b654b" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Register_Post_ReturnsViewIfRegistrationFails" />
+    </UnitTest>
+    <UnitTest name="LogOff_LogsOutAndRedirects" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="0bd9dd26-3e93-03dc-8a0b-f43c075d2a6a">
+      <Execution id="8de7113a-b60f-4e27-a6d0-306334ccdbb2" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOff_LogsOutAndRedirects" />
+    </UnitTest>
+    <UnitTest name="About" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="175d46b5-0796-765b-5032-96984d333ae4">
+      <Execution id="a0d6d9cc-06f4-45c9-9101-7b8b9786dee1" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.HomeControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="About" />
+    </UnitTest>
+    <UnitTest name="ChangePasswordSuccess_ReturnsView" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="c3807333-c314-95de-3881-b87e1f746813">
+      <Execution id="ee30ad5c-7d48-4ef7-b6df-5d0f000e6a5b" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChangePasswordSuccess_ReturnsView" />
+    </UnitTest>
+    <UnitTest name="ChangePassword_Get_ReturnsView" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="5ba04fc7-1450-1b69-1318-c8c65d226fb5">
+      <Execution id="4e1ae153-7c39-45f5-9f95-0b3e6f7f810c" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChangePassword_Get_ReturnsView" />
+    </UnitTest>
+    <UnitTest name="ChangePassword_Post_ReturnsViewIfChangePasswordFails" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="3222c9d7-01ab-b77a-f609-93c94ea34946">
+      <Execution id="5d512a8c-bf60-4d3a-a764-664c4f1461b7" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChangePassword_Post_ReturnsViewIfChangePasswordFails" />
+    </UnitTest>
+    <UnitTest name="LogOn_Post_ReturnsRedirectOnSuccess_WithReturnUrl" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="4fa759ec-98e7-c948-1855-d039d31c55de">
+      <Execution id="152826c7-560b-4e29-b0b3-bd0c562ee161" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn_Post_ReturnsRedirectOnSuccess_WithReturnUrl" />
+    </UnitTest>
+    <UnitTest name="LogOn_Post_ReturnsViewIfModelStateIsInvalid" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="417dc34d-b47d-345c-6ce8-4fad596356b2">
+      <Execution id="6f926bcd-4468-4c64-9200-9048482fee05" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn_Post_ReturnsViewIfModelStateIsInvalid" />
+    </UnitTest>
+    <UnitTest name="LogOn_Post_ReturnsRedirectOnSuccess_WithoutReturnUrl" storage="c:\users\emmanuel\desktop\siabd\projet\projetsiabd\projetsiabd.tests\bin\debug\projetsiabd.tests.dll" id="b62c31e1-1c69-bc90-7826-1f029851c6d0">
+      <Execution id="b756c2f5-dc7b-45e0-b45f-97a6f0725a0b" />
+      <TestMethod codeBase="C:/Users/Emmanuel/Desktop/siabd/projet/projetSIABD/projetSIABD.Tests/bin/Debug/projetSIABD.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="projetSIABD.Tests.Controllers.AccountControllerTest, projetSIABD.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn_Post_ReturnsRedirectOnSuccess_WithoutReturnUrl" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Les résultats ne figurent pas dans une liste" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Tous les résultats chargés" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="5dd20394-cfe9-ad1e-4792-410aa2308cfa" executionId="fa6352e9-83b3-4201-b9c3-24f6f4dcc9ff" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="175d46b5-0796-765b-5032-96984d333ae4" executionId="a0d6d9cc-06f4-45c9-9101-7b8b9786dee1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5ba04fc7-1450-1b69-1318-c8c65d226fb5" executionId="4e1ae153-7c39-45f5-9f95-0b3e6f7f810c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="336cb6a4-0825-a5b7-4a68-fc0aaa045ff4" executionId="800e971e-a3ab-450f-a8ef-92a8e91b0ce6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3222c9d7-01ab-b77a-f609-93c94ea34946" executionId="5d512a8c-bf60-4d3a-a764-664c4f1461b7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9ad0fbbf-2966-36c0-0bae-d70e8c8655e6" executionId="34b9c95e-5e8a-4dd9-9670-7a4c03d3d64b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c3807333-c314-95de-3881-b87e1f746813" executionId="ee30ad5c-7d48-4ef7-b6df-5d0f000e6a5b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0bd9dd26-3e93-03dc-8a0b-f43c075d2a6a" executionId="8de7113a-b60f-4e27-a6d0-306334ccdbb2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5ee921fc-a044-8942-f86f-77749095dc40" executionId="1fd63c3c-e53d-4814-93c9-2c6fa39c7885" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b62c31e1-1c69-bc90-7826-1f029851c6d0" executionId="b756c2f5-dc7b-45e0-b45f-97a6f0725a0b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4fa759ec-98e7-c948-1855-d039d31c55de" executionId="152826c7-560b-4e29-b0b3-bd0c562ee161" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="417dc34d-b47d-345c-6ce8-4fad596356b2" executionId="6f926bcd-4468-4c64-9200-9048482fee05" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ac0f042e-ae9a-2786-6a9a-3630e0ca324a" executionId="3bbcaa75-ad45-46b7-bfc6-bbcbfbcd93f2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a41d7477-b448-cf21-9d1b-32930fd14623" executionId="dee3f8b2-5b2c-4a1a-b7ef-74f394abed98" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="50136e7f-047e-2233-eda8-527ac172e89b" executionId="43e07acb-df9e-4ce4-9542-c70dcfff15a8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3d77df01-c586-fe40-f81d-e8a328cce2eb" executionId="4bfd38f4-b041-408b-96b4-843d460b654b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b0e15bb5-66eb-1e24-6ae3-55f2dc425e75" executionId="6c2e9961-83c1-4a10-b794-65fa481928f3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="fa6352e9-83b3-4201-b9c3-24f6f4dcc9ff" testId="5dd20394-cfe9-ad1e-4792-410aa2308cfa" testName="Index" computerName="EMMANUEL-PC" duration="00:00:00.0171090" startTime="2013-01-10T11:58:14.1671898+01:00" endTime="2013-01-10T11:58:15.2402512+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fa6352e9-83b3-4201-b9c3-24f6f4dcc9ff">
+    </UnitTestResult>
+    <UnitTestResult executionId="a0d6d9cc-06f4-45c9-9101-7b8b9786dee1" testId="175d46b5-0796-765b-5032-96984d333ae4" testName="About" computerName="EMMANUEL-PC" duration="00:00:00.0002629" startTime="2013-01-10T11:58:15.2882540+01:00" endTime="2013-01-10T11:58:15.2942543+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a0d6d9cc-06f4-45c9-9101-7b8b9786dee1">
+    </UnitTestResult>
+    <UnitTestResult executionId="4e1ae153-7c39-45f5-9f95-0b3e6f7f810c" testId="5ba04fc7-1450-1b69-1318-c8c65d226fb5" testName="ChangePassword_Get_ReturnsView" computerName="EMMANUEL-PC" duration="00:00:00.0650573" startTime="2013-01-10T11:58:15.3002547+01:00" endTime="2013-01-10T11:58:15.3792592+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4e1ae153-7c39-45f5-9f95-0b3e6f7f810c">
+    </UnitTestResult>
+    <UnitTestResult executionId="800e971e-a3ab-450f-a8ef-92a8e91b0ce6" testId="336cb6a4-0825-a5b7-4a68-fc0aaa045ff4" testName="ChangePassword_Post_ReturnsRedirectOnSuccess" computerName="EMMANUEL-PC" duration="00:00:00.0520030" startTime="2013-01-10T11:58:15.3872596+01:00" endTime="2013-01-10T11:58:15.4462630+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="800e971e-a3ab-450f-a8ef-92a8e91b0ce6">
+    </UnitTestResult>
+    <UnitTestResult executionId="5d512a8c-bf60-4d3a-a764-664c4f1461b7" testId="3222c9d7-01ab-b77a-f609-93c94ea34946" testName="ChangePassword_Post_ReturnsViewIfChangePasswordFails" computerName="EMMANUEL-PC" duration="00:00:00.0044227" startTime="2013-01-10T11:58:15.4502632+01:00" endTime="2013-01-10T11:58:15.4692643+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5d512a8c-bf60-4d3a-a764-664c4f1461b7">
+    </UnitTestResult>
+    <UnitTestResult executionId="34b9c95e-5e8a-4dd9-9670-7a4c03d3d64b" testId="9ad0fbbf-2966-36c0-0bae-d70e8c8655e6" testName="ChangePassword_Post_ReturnsViewIfModelStateIsInvalid" computerName="EMMANUEL-PC" duration="00:00:00.0004090" startTime="2013-01-10T11:58:15.4742646+01:00" endTime="2013-01-10T11:58:15.4812650+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="34b9c95e-5e8a-4dd9-9670-7a4c03d3d64b">
+    </UnitTestResult>
+    <UnitTestResult executionId="ee30ad5c-7d48-4ef7-b6df-5d0f000e6a5b" testId="c3807333-c314-95de-3881-b87e1f746813" testName="ChangePasswordSuccess_ReturnsView" computerName="EMMANUEL-PC" duration="00:00:00.0002387" startTime="2013-01-10T11:58:15.4842652+01:00" endTime="2013-01-10T11:58:15.4892655+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ee30ad5c-7d48-4ef7-b6df-5d0f000e6a5b">
+    </UnitTestResult>
+    <UnitTestResult executionId="8de7113a-b60f-4e27-a6d0-306334ccdbb2" testId="0bd9dd26-3e93-03dc-8a0b-f43c075d2a6a" testName="LogOff_LogsOutAndRedirects" computerName="EMMANUEL-PC" duration="00:00:00.0005750" startTime="2013-01-10T11:58:15.4912656+01:00" endTime="2013-01-10T11:58:15.4972659+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8de7113a-b60f-4e27-a6d0-306334ccdbb2">
+    </UnitTestResult>
+    <UnitTestResult executionId="1fd63c3c-e53d-4814-93c9-2c6fa39c7885" testId="5ee921fc-a044-8942-f86f-77749095dc40" testName="LogOn_Get_ReturnsView" computerName="EMMANUEL-PC" duration="00:00:00.0002568" startTime="2013-01-10T11:58:15.4992660+01:00" endTime="2013-01-10T11:58:15.5042663+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1fd63c3c-e53d-4814-93c9-2c6fa39c7885">
+    </UnitTestResult>
+    <UnitTestResult executionId="b756c2f5-dc7b-45e0-b45f-97a6f0725a0b" testId="b62c31e1-1c69-bc90-7826-1f029851c6d0" testName="LogOn_Post_ReturnsRedirectOnSuccess_WithoutReturnUrl" computerName="EMMANUEL-PC" duration="00:00:00.0012110" startTime="2013-01-10T11:58:15.5072665+01:00" endTime="2013-01-10T11:58:15.5142669+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b756c2f5-dc7b-45e0-b45f-97a6f0725a0b">
+    </UnitTestResult>
+    <UnitTestResult executionId="152826c7-560b-4e29-b0b3-bd0c562ee161" testId="4fa759ec-98e7-c948-1855-d039d31c55de" testName="LogOn_Post_ReturnsRedirectOnSuccess_WithReturnUrl" computerName="EMMANUEL-PC" duration="00:00:00.0008113" startTime="2013-01-10T11:58:15.5162670+01:00" endTime="2013-01-10T11:58:15.5232674+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="152826c7-560b-4e29-b0b3-bd0c562ee161">
+    </UnitTestResult>
+    <UnitTestResult executionId="6f926bcd-4468-4c64-9200-9048482fee05" testId="417dc34d-b47d-345c-6ce8-4fad596356b2" testName="LogOn_Post_ReturnsViewIfModelStateIsInvalid" computerName="EMMANUEL-PC" duration="00:00:00.0002834" startTime="2013-01-10T11:58:15.5262676+01:00" endTime="2013-01-10T11:58:15.5312679+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6f926bcd-4468-4c64-9200-9048482fee05">
+    </UnitTestResult>
+    <UnitTestResult executionId="3bbcaa75-ad45-46b7-bfc6-bbcbfbcd93f2" testId="ac0f042e-ae9a-2786-6a9a-3630e0ca324a" testName="LogOn_Post_ReturnsViewIfValidateUserFails" computerName="EMMANUEL-PC" duration="00:00:00.0003127" startTime="2013-01-10T11:58:15.5342680+01:00" endTime="2013-01-10T11:58:15.5392683+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3bbcaa75-ad45-46b7-bfc6-bbcbfbcd93f2">
+    </UnitTestResult>
+    <UnitTestResult executionId="dee3f8b2-5b2c-4a1a-b7ef-74f394abed98" testId="a41d7477-b448-cf21-9d1b-32930fd14623" testName="Register_Get_ReturnsView" computerName="EMMANUEL-PC" duration="00:00:00.0003540" startTime="2013-01-10T11:58:15.5422685+01:00" endTime="2013-01-10T11:58:15.5472688+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dee3f8b2-5b2c-4a1a-b7ef-74f394abed98">
+    </UnitTestResult>
+    <UnitTestResult executionId="43e07acb-df9e-4ce4-9542-c70dcfff15a8" testId="50136e7f-047e-2233-eda8-527ac172e89b" testName="Register_Post_ReturnsRedirectOnSuccess" computerName="EMMANUEL-PC" duration="00:00:00.0012071" startTime="2013-01-10T11:58:15.5502690+01:00" endTime="2013-01-10T11:58:15.5562693+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="43e07acb-df9e-4ce4-9542-c70dcfff15a8">
+    </UnitTestResult>
+    <UnitTestResult executionId="4bfd38f4-b041-408b-96b4-843d460b654b" testId="3d77df01-c586-fe40-f81d-e8a328cce2eb" testName="Register_Post_ReturnsViewIfRegistrationFails" computerName="EMMANUEL-PC" duration="00:00:00.0004781" startTime="2013-01-10T11:58:15.5582694+01:00" endTime="2013-01-10T11:58:15.5652698+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4bfd38f4-b041-408b-96b4-843d460b654b">
+    </UnitTestResult>
+    <UnitTestResult executionId="6c2e9961-83c1-4a10-b794-65fa481928f3" testId="b0e15bb5-66eb-1e24-6ae3-55f2dc425e75" testName="Register_Post_ReturnsViewIfModelStateIsInvalid" computerName="EMMANUEL-PC" duration="00:00:00.0002873" startTime="2013-01-10T11:58:15.5672699+01:00" endTime="2013-01-10T11:58:15.5732703+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6c2e9961-83c1-4a10-b794-65fa481928f3">
+    </UnitTestResult>
+  </Results>
+</TestRun>

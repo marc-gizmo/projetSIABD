@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "projetSIABD", "projetSIABD\projetSIABD.csproj", "{4D7D4BBE-C14B-42EA-B4FE-0E742B06310E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "projetSIABD.Tests", "projetSIABD.Tests\projetSIABD.Tests.csproj", "{BE9AB43F-C880-4A8A-8E25-F9186A0DCFAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D7D4BBE-C14B-42EA-B4FE-0E742B06310E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D7D4BBE-C14B-42EA-B4FE-0E742B06310E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D7D4BBE-C14B-42EA-B4FE-0E742B06310E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D7D4BBE-C14B-42EA-B4FE-0E742B06310E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE9AB43F-C880-4A8A-8E25-F9186A0DCFAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE9AB43F-C880-4A8A-8E25-F9186A0DCFAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE9AB43F-C880-4A8A-8E25-F9186A0DCFAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE9AB43F-C880-4A8A-8E25-F9186A0DCFAB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
