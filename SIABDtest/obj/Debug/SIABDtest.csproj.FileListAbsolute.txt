@@ -1,7 +1,0 @@
-c:\users\marc\documents\visual studio 2010\Projects\SIABDtest\SIABDtest\bin\SIABDtest.dll
-c:\users\marc\documents\visual studio 2010\Projects\SIABDtest\SIABDtest\bin\SIABDtest.pdb
-c:\users\marc\documents\visual studio 2010\Projects\SIABDtest\SIABDtest\obj\Debug\SIABDtest.dll
-c:\users\marc\documents\visual studio 2010\Projects\SIABDtest\SIABDtest\obj\Debug\SIABDtest.pdb
-C:\Users\Marc\Documents\Visual Studio 2010\Projects\SIABDtest\SIABDtest\obj\Debug\SIABDtest.csprojResolveAssemblyReference.cache
-C:\Users\Marc\Documents\Visual Studio 2010\Projects\projetSIABD\SIABDtest\obj\Debug\SIABDtest.csprojResolveAssemblyReference.cache
-C:\Users\Marc\Documents\Visual Studio 2010\Projects\projetSIABD\SIABDtest\obj\Debug\SIABDtest.dll

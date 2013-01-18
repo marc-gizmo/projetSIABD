@@ -22,7 +22,7 @@ namespace projetSIABD.Controllers
 
             IEnumerable<ThemeIndexModels> model = tabl.ToList();
             my_aspnet_users moi = db.my_aspnet_users.Where(a => a.name.Equals(User.Identity.Name)).FirstOrDefault();
-            
+
 
             foreach (var item in model)
             {
@@ -30,16 +30,16 @@ namespace projetSIABD.Controllers
                          where (a.user == moi.id) && (a.theme == item.theme.themeId)
                          select a;
                 */
-               
 
-                abonnesdbs abonne = db.abonnesdbs.Where(a=>a.theme.Equals(item.theme.themeId)).Where(a=>a.user.Equals(moi.id)).FirstOrDefault();
-                 
+
+                abonnesdbs abonne = db.abonnesdbs.Where(a => a.theme.Equals(item.theme.themeId)).Where(a => a.user.Equals(moi.id)).FirstOrDefault();
+
                 if (abonne != null)
                 {
                     item.isInTheme = abonne.ID;
                 }
-                
-               
+
+
             }
 
             

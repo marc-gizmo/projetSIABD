@@ -27,13 +27,12 @@ namespace projetSIABD.Controllers
 
         public ViewResult NewsFeed()
         {
-            var messagesdbs = db.messagesdbs.Include("my_aspnet_users").Include("themesdbs");
-            /*var messagesdbstest = from m in db.messagesdbs
+            //var messagesdbs = db.messagesdbs.Include("my_aspnet_users").Include("themesdbs");
+            var messagesdbstest = from m in db.messagesdbs
                               join u in db.my_aspnet_users on m.author equals u.id
                               join t in db.themesdbs on m.theme equals t.themeId
-                              select ;
-             * */
-            var data = new projetSIABD.Models.newsFeedModels(messagesdbs.ToList());
+                              select new messagesdbs { content = m.content, author = m.author, messageID = m.messageID };
+            IEnumerable<messagesdbs> data = messagesdbstest.ToList();
             return View(data);
         }
 
