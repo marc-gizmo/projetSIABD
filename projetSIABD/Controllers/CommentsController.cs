@@ -14,34 +14,6 @@ namespace projetSIABD.Controllers
         private MySQLEntities db = new MySQLEntities();
 
         //
-        // GET: /Comments/
-
-        public ViewResult Index()
-        {
-            var commentsdbs = db.commentsdbs.Include(db.messagesdbs.ToString()).Include(db.my_aspnet_users.ToString());
-            return View(commentsdbs.ToList());
-        }
-
-        //
-        // GET: /Comments/Details/5
-
-        public ViewResult Details(int id)
-        {
-            commentsdbs commentsdbs = db.commentsdbs.Where(a => a.ID.Equals(id)).FirstOrDefault();
-            return View(commentsdbs);
-        }
-
-        //
-        // GET: /Comments/Create
-
-        public ActionResult Create()
-        {
-            ViewData["messageId"] = new SelectList(db.messagesdbs, "messageID", "content");
-            ViewData["author"] = new SelectList(db.my_aspnet_users, "ID", "firstname");
-            return View();
-        }
-
-        //
         // GET: /Comments/CreateAComment
 
         public ActionResult CreateAComment(int id)
@@ -74,72 +46,51 @@ namespace projetSIABD.Controllers
             }
         }
 
-
         //
-        // POST: /Comments/Create
-
-        [HttpPost]
-        public ActionResult Create(commentsdbs commentsdbs)
+        // POST: /Messages/DeleteMyComment
+        [Authorize()]
+        public ActionResult DeleteMyComment(int id)
         {
-            if (ModelState.IsValid)
+            my_aspnet_users user = db.my_aspnet_users.Where(a => a.name.Equals(User.Identity.Name)).FirstOrDefault();
+            commentsdbs commentsdbs = db.commentsdbs.Where(m => m.ID.Equals(id)).FirstOrDefault();
+            if (commentsdbs.author == user.id) // on a le droit de supprimer que ses messages
             {
-                db.commentsdbs.AddObject(commentsdbs);
-                db.SaveChanges();
-                return RedirectToAction("Index");  
+                try
+                {
+                    db.commentsdbs.DeleteObject(commentsdbs);
+                    db.SaveChanges();
+
+                    return RedirectToAction("NewsFeed");
+                }
+                catch
+                {
+                    return RedirectToAction("NewsFeed");
+                }
             }
-
-            ViewData["messageId"] = new SelectList(db.messagesdbs, "messageID", "content", commentsdbs.messageId);
-            ViewData["author"] = new SelectList(db.my_aspnet_users, "ID", "firstname", commentsdbs.author);
-            return View(commentsdbs);
-        }
-        
-        //
-        // GET: /Comments/Edit/5
- 
-        public ActionResult Edit(int id)
-        {
-            commentsdbs commentsdbs = db.commentsdbs.Where(a => a.ID.Equals(id)).FirstOrDefault();
-            ViewData["messageId"] = new SelectList(db.messagesdbs, "messageID", "content", commentsdbs.messageId);
-            ViewData["author"] = new SelectList(db.my_aspnet_users, "ID", "firstname", commentsdbs.author);
-            return View(commentsdbs);
-        }
-
-        //
-        // POST: /Comments/Edit/5
-
-        [HttpPost]
-        public ActionResult Edit(commentsdbs commentsdbs)
-        {
-            if (ModelState.IsValid)
+            else
             {
-                //db.Entry(commentsdbs).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                //il faut afficher un message d'erreur
+                return RedirectToAction("NewsFeed");
             }
-            ViewData["messageId"] = new SelectList(db.messagesdbs, "messageID", "content", commentsdbs.messageId);
-            ViewData["author"] = new SelectList(db.my_aspnet_users, "ID", "firstname", commentsdbs.author);
-            return View(commentsdbs);
         }
 
         //
-        // GET: /Comments/Delete/5
- 
-        public ActionResult Delete(int id)
+        // POST: /Messages/ModerateComment
+        [Authorize(Roles = "Administrateur")]
+        public ActionResult ModerateMessage(int id)
         {
-            commentsdbs commentsdbs = db.commentsdbs.Where(a => a.ID.Equals(id)).FirstOrDefault();
-            return View(commentsdbs);
-        }
+            commentsdbs commentsdbs = db.commentsdbs.Where(m => m.ID.Equals(id)).FirstOrDefault();
+            try
+            {
+                db.commentsdbs.DeleteObject(commentsdbs);
+                db.SaveChanges();
 
-        //
-        // POST: /Comments/Delete/5
-
-        [HttpPost, ActionName("Delete")]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            commentsdbs commentsdbs = db.commentsdbs.Where(a => a.ID.Equals(id)).FirstOrDefault();
-            db.commentsdbs.DeleteObject(commentsdbs);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+                return RedirectToAction("NewsFeed");
+            }
+            catch
+            {
+                return RedirectToAction("NewsFeed");
+            }
         }
 
         protected override void Dispose(bool disposing)
