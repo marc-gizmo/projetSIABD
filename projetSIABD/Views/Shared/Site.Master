@@ -25,7 +25,7 @@
                 <ul id="menu">              
                     <li><%: Html.ActionLink("Accueil", "Index", "Home")%></li>
                     <li><%: Html.ActionLink("À propos de", "About", "Home")%></li>
-                    <li><%: Html.ActionLink("Voir les messages","NewsFeed","Messages") %></li>
+                    <li><%: Html.ActionLink("Fil d'actualités","NewsFeed","Messages") %></li>
                     <li><%: Html.ActionLink("Voir les thèmes", "Index", "Themes") %></li>
                     <li><%: Html.ActionLink("Statistiques du site","Index","Boss")%></li>
                     <li><%: Html.ActionLink("Administrer Users", "Index", "User")%></li>

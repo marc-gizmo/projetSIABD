@@ -37,6 +37,14 @@
                
                 <%: Html.ActionLink("Delete", "Delete", new { id=item.theme.themeId })%>
             </td>
+            <% if (item.isInTheme == 0)
+               { %>
+            <td></td>
+            <% }
+               else
+               {  %>
+            <td><%: Html.ActionLink("Poster une News dans ce theme", "CreateThemedNew", "Messages", new { themeId = item.theme.themeId }, null)%></td>
+            <% } %>
         </tr>
     
     <% } %>
