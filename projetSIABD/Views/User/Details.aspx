@@ -20,16 +20,10 @@
         <div class="display-label">Comment</div>
         <div class="display-field"><%: Model.Comment %></div>
         
-        
-        
+              
         <div class="display-label">IsApproved</div>
         <div class="display-field"><%: Model.IsApproved %></div>
-        
-        
-        <div class="display-label">IsLockedOut</div>
-        <div class="display-field"><%: Model.IsLockedOut %></div>
-        
-       
+                     
         
     </fieldset>
     <p>

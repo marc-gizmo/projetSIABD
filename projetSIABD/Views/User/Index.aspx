@@ -28,9 +28,7 @@
                 IsApproved
             </th>
             
-            <th>
-                IsLockedOut
-            </th>
+            
              <th></th>
         </tr>
 
@@ -55,9 +53,6 @@
                 <%: item.membership.IsApproved %>
             </td>
             
-            <td>
-                <%: item.membership.IsLockedOut %>
-            </td>
              <td>
                 <%: Html.ActionLink("Edit", "Edit", new { id=item.membership.userId }) %> |
                 <%: Html.ActionLink("Details", "Details", new { id=item.membership.userId })%> |

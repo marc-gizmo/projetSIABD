@@ -49,17 +49,8 @@
                 <%: Html.LabelFor(model => model.membership.IsApproved)%>
             </div>
             <div class="editor-field">
-                <%: Html.TextBoxFor(model => model.membership.IsApproved)%>
+                <%: Html.TextBoxFor(model => (bool) model.membership.IsApproved)%>
                 <%: Html.ValidationMessageFor(model => model.membership.IsApproved)%>
-            </div>
-            
-            
-            <div class="editor-label">
-                <%: Html.LabelFor(model => model.membership.IsLockedOut)%>
-            </div>
-            <div class="editor-field">
-                <%: Html.TextBoxFor(model => model.membership.IsLockedOut)%>
-                <%: Html.ValidationMessageFor(model => model.membership.IsLockedOut)%>
             </div>
            
             

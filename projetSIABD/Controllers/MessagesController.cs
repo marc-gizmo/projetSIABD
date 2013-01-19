@@ -20,7 +20,7 @@ namespace projetSIABD.Controllers
         {
             //var messagesdbs = db.messagesdbs.Include("my_aspnet_users").Include("themesdbs");
             var messagesdbstest = from m in db.messagesdbs
-                              join u in db.my_aspnet_users on m.author equals u.id
+                              //join u in db.my_aspnet_users on m.author equals u.id
                               //join t in db.themesdbs on m.theme equals t.themeId
                               select m;
             List<messagesdbs> tmp = messagesdbstest.ToList();

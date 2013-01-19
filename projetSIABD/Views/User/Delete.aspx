@@ -27,8 +27,8 @@
        { %>
        <%: Html.ValidationSummary(true) %>
         <p>
-           <%: Html.Hidden("email",Model.Email) %>
-		    <input type="submit" value="Delete2" /> |
+         
+		    <input type="submit" value="Delete" /> |
 		    <%: Html.ActionLink("Back to List", "Index")%>
         </p>
     <% } %>

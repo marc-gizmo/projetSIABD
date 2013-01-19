@@ -31,9 +31,10 @@ namespace projetSIABD.Controllers
         [Authorize(Roles = "Administrateur")]
         public ActionResult Index()
         {
-            var model = from m in db.my_aspnet_membership
-                                       join u in db.my_aspnet_users on m.userId equals u.id
-                                       select new UserModel { UserName = u.name, membership = m };
+            var model = from m in db.my_aspnet_membership                      
+                        join u in db.my_aspnet_users on m.userId equals u.id
+                        where (m.IsLockedOut == false)
+                        select new UserModel { UserName = u.name, membership = m };
 
             return View(model.ToList());
         }
@@ -147,20 +148,31 @@ namespace projetSIABD.Controllers
         // POST: /User/Delete/5
         [Authorize(Roles = "Administrateur")]
         [HttpPost]
-        public ActionResult Delete(string email)
-        {
-      
+        public ActionResult Delete(int id, FormCollection collection)
+        {      
+            /*try
+            {
+                my_aspnet_membership membership = db.my_aspnet_membership.Where(m=>m.userId.Equals(id)).FirstOrDefault();
+                membership.IsLockedOut = true;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return RedirectToAction("Delete", new { id = id });
+            }
+            */
 
-
-            string name = MembershipService.GetUserNameByEmail(email);
+            string name = db.my_aspnet_users.Where(a => a.id.Equals(id)).FirstOrDefault().name;
 
 
             if (String.IsNullOrEmpty(name))
             {
                 return RedirectToAction("Delete");
             }
+            // Peut lever une exception si l'utilisateur possède des messages ou des likes
             Membership.DeleteUser(name, true);
- 
+            
             return RedirectToAction("Index");
          
         }

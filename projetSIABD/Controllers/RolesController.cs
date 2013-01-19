@@ -85,6 +85,23 @@ namespace projetSIABD.Controllers
         {
             try
             {
+                // On regarde s'il reste des users qui ont le rôle
+
+                var tabl = from r in db.my_aspnet_roles
+                            join ur in db.my_aspnet_usersinroles on r.id equals ur.userId
+                            where (r.id.Equals(Model.id))
+                            select ur;
+                var users = tabl.ToList();
+
+                if (users != null)
+                {
+                    foreach (var item in users)
+                    {
+                        db.my_aspnet_usersinroles.DeleteObject(item);
+                    }
+                    db.SaveChanges();
+                }
+                // On supprime le rôle
                 Roles.DeleteRole(Model.name);
 
                 return RedirectToAction("Index");
