@@ -17,9 +17,9 @@ namespace projetSIABD.Controllers
         public ActionResult Index()
         {
             var tabl = from t in db.themesdbs
+                       where t.themeId > 1
                        join a in db.abonnesdbs on t.themeId equals a.theme into themeGroup                       
                        select new ThemeIndexModels { theme = t, nbUser =  themeGroup.Count(), isInTheme = 0};
-
             IEnumerable<ThemeIndexModels> model = tabl.ToList();
             my_aspnet_users moi = db.my_aspnet_users.Where(a => a.name.Equals(User.Identity.Name)).FirstOrDefault();
 

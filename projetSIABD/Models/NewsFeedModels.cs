@@ -27,8 +27,8 @@ namespace projetSIABD.Models
         {
             var messagesdbstest = from m in db.messagesdbs
                                   join u in db.my_aspnet_users on m.author equals u.id
-                                  //join t in db.themesdbs on m.theme equals t.themeId
-                                  select new projetSIABD.Models.messageWithJoin { nouvelle = m, author = u.name };
+                                  join t in db.themesdbs on m.theme equals t.themeId
+                                  select new projetSIABD.Models.messageWithJoin { nouvelle = m, author = u.name, theme = t.name };
             nouvelle = messagesdbstest.Where(a => a.nouvelle.messageID.Equals(messageID)).FirstOrDefault();
             associatedComments = db.commentsdbs.Where(a => a.messageId.Equals(messageID)).OrderByDescending(a => a.date).ToList();
             likes = db.likesdbs.Where(l => l.messageApproved.Equals(messageID)).ToList();

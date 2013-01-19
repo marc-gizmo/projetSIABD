@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 3.5.1
 -- http://www.phpmyadmin.net
 --
@@ -319,6 +319,13 @@ CREATE TABLE IF NOT EXISTS `themesdbs` (
   `name` varchar(100) NOT NULL,
   PRIMARY KEY (`themeId`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Contenu de la table `my_aspnet_usersinroles`
+--
+
+INSERT INTO `themesdbs` (`themeId`, `name`) VALUES
+(1, 'defaut');
 
 --
 -- Contraintes pour les tables exportées

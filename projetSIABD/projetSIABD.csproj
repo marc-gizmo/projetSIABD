@@ -115,11 +115,8 @@
     <Content Include="Views\Like\Details.aspx" />
     <Content Include="Views\Like\Edit.aspx" />
     <Content Include="Views\Like\Index.aspx" />
-    <Content Include="Views\Messages\Create.aspx" />
+    <Content Include="Views\Messages\CreateThemedNew.aspx" />
     <Content Include="Views\Messages\CreateANew.aspx" />
-    <Content Include="Views\Messages\Delete.aspx" />
-    <Content Include="Views\Messages\Details.aspx" />
-    <Content Include="Views\Messages\Edit.aspx" />
     <Content Include="Views\Messages\Index.aspx" />
     <Content Include="Views\Messages\NewsFeed.aspx" />
     <Content Include="Views\Roles\Create.aspx" />

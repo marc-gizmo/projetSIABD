@@ -20,17 +20,10 @@ namespace projetSIABD.Controllers
         {
             //var messagesdbs = db.messagesdbs.Include("my_aspnet_users").Include("themesdbs");
             var messagesdbstest = from m in db.messagesdbs
-<<<<<<< HEAD
-                              //join u in db.my_aspnet_users on m.author equals u.id
-                              //join t in db.themesdbs on m.theme equals t.themeId
-                              select m;
-            List<messagesdbs> tmp = messagesdbstest.ToList();
-=======
                                   join u in db.my_aspnet_users on m.author equals u.id
-                                  //join t in db.themesdbs on m.theme equals t.themeId
-                                  select new projetSIABD.Models.messageWithJoin  { nouvelle = m, author = u.name };
-            List<projetSIABD.Models.messageWithJoin> tmp = messagesdbstest.ToList();
->>>>>>> 6e444a4a75817ae98dbcac0e74faed5062fce895
+                                  join t in db.themesdbs on m.theme equals t.themeId
+                                  select new projetSIABD.Models.messageWithJoin  { nouvelle = m, author = u.name, theme = t.name };
+            List<projetSIABD.Models.messageWithJoin> tmp = messagesdbstest.OrderByDescending(t => t.nouvelle.date).ToList();
             var data = new projetSIABD.Models.newsFeedModels(tmp, User.Identity.Name, User.IsInRole("administrateur"));
             return View(data);
         }
@@ -52,8 +45,44 @@ namespace projetSIABD.Controllers
             my_aspnet_users user = db.my_aspnet_users.Where(a => a.name.Equals(User.Identity.Name)).FirstOrDefault();
             messagesdbs.author = user.id;
             messagesdbs.censored = 0;
+            messagesdbs.theme = 1; //le theme d'ID 1 est le theme par defaut.
             messagesdbs.important = 0;
-            messagesdbs.date = DateTime.Now;
+            messagesdbs.date = DateTime.UtcNow;
+
+            try
+            {
+                db.messagesdbs.AddObject(messagesdbs);
+                db.SaveChanges();
+
+                return RedirectToAction("NewsFeed");
+            }
+            catch
+            {
+                return View(messagesdbs);
+            }
+        }
+
+        //
+        // GET: /Messages/CreateThemedNew
+        [Authorize()]
+        public ActionResult CreateThemedNew(int themeId)
+        {
+            messagesdbs messagesdbs = new messagesdbs();
+            messagesdbs.theme = themeId;
+            return View(messagesdbs);
+        }
+
+        //
+        // POST: /Messages/CreateThemedNew
+        [Authorize()]
+        [HttpPost]
+        public ActionResult CreateThemedNew(messagesdbs messagesdbs)
+        {
+            my_aspnet_users user = db.my_aspnet_users.Where(a => a.name.Equals(User.Identity.Name)).FirstOrDefault();
+            messagesdbs.author = user.id;
+            messagesdbs.censored = 0;
+            messagesdbs.important = 0;
+            messagesdbs.date = DateTime.UtcNow;
 
             try
             {
