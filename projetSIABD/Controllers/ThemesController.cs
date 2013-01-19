@@ -13,7 +13,7 @@ namespace projetSIABD.Controllers
         private MySQLEntities db = new MySQLEntities();
         //
         // GET: /Themes/
-
+        [Authorize()]
         public ActionResult Index()
         {
             var tabl = from t in db.themesdbs
@@ -26,12 +26,7 @@ namespace projetSIABD.Controllers
 
             foreach (var item in model)
             {
-                /*var temp = from a in db.abonnesdbs
-                         where (a.user == moi.id) && (a.theme == item.theme.themeId)
-                         select a;
-                */
-
-
+                
                 abonnesdbs abonne = db.abonnesdbs.Where(a => a.theme.Equals(item.theme.themeId)).Where(a => a.user.Equals(moi.id)).FirstOrDefault();
 
                 if (abonne != null)
@@ -51,7 +46,7 @@ namespace projetSIABD.Controllers
 
         //
         // GET: /Themes/Create
-
+        [Authorize()]
         public ActionResult Create()
         {
             return View();
@@ -59,7 +54,7 @@ namespace projetSIABD.Controllers
 
         //
         // POST: /Themes/Create
-
+        [Authorize()]
         [HttpPost]
         public ActionResult Create(themesdbs model)
         {
@@ -78,7 +73,7 @@ namespace projetSIABD.Controllers
         
         //
         // GET: /Themes/Edit/5
- 
+        [Authorize(Roles="Administrateur")]
         public ActionResult Edit(int id)
         {
             var tabl = from t in db.themesdbs
@@ -96,7 +91,7 @@ namespace projetSIABD.Controllers
 
         //
         // POST: /Themes/Edit/5
-
+        [Authorize(Roles = "Administrateur")]
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -119,7 +114,7 @@ namespace projetSIABD.Controllers
 
         //
         // GET: /Themes/Delete/5
- 
+        [Authorize(Roles = "Administrateur")]
         public ActionResult Delete(int id)
         {
             themesdbs model = db.themesdbs.Where(a => a.themeId.Equals(id)).FirstOrDefault();
@@ -128,7 +123,7 @@ namespace projetSIABD.Controllers
 
         //
         // POST: /Themes/Delete/5
-
+        [Authorize(Roles = "Administrateur")]
         [HttpPost]
         public ActionResult Delete(int id, FormCollection Collection)
         {
@@ -149,7 +144,7 @@ namespace projetSIABD.Controllers
 
         //
         // GET : /Themes/DelUser/5
-
+        [Authorize()]
         public ActionResult DelUser(int id)
         {
             var tabl = from t in db.themesdbs
@@ -165,6 +160,7 @@ namespace projetSIABD.Controllers
 
         //
         // POST : /Themes/DelUser/5
+        [Authorize()]
         [HttpPost]
         public ActionResult DelUser(int id, FormCollection collection)
         {
@@ -185,6 +181,7 @@ namespace projetSIABD.Controllers
 
         //
         // GET : /Themes/AddUser/5
+        [Authorize()]
         public ActionResult AddUser(int id)
         {
             themesdbs theme = db.themesdbs.Where(a => a.themeId.Equals(id)).FirstOrDefault();
@@ -193,6 +190,7 @@ namespace projetSIABD.Controllers
 
         //
         // POST : /Themes/AddUser/5
+        [Authorize()]
         [HttpPost]
         public ActionResult AddUser(int id, FormCollection collection)
         {

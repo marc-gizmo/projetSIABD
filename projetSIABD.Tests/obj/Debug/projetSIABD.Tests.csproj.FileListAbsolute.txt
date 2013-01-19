@@ -14,3 +14,11 @@ C:\Users\Marc\Documents\Visual Studio 2010\Projects\projetSIABD\projetSIABD.Test
 C:\Users\Marc\Documents\Visual Studio 2010\Projects\projetSIABD\projetSIABD.Tests\obj\Debug\projetSIABD.Tests.csprojResolveAssemblyReference.cache
 C:\Users\Marc\Documents\Visual Studio 2010\Projects\projetSIABD\projetSIABD.Tests\obj\Debug\projetSIABD.Tests.dll
 C:\Users\Marc\Documents\Visual Studio 2010\Projects\projetSIABD\projetSIABD.Tests\obj\Debug\projetSIABD.Tests.pdb
+C:\Users\Emmanuel\Desktop\siabd\github\projetSIABD\projetSIABD.Tests\bin\Debug\projetSIABD.Tests.dll.config
+C:\Users\Emmanuel\Desktop\siabd\github\projetSIABD\projetSIABD.Tests\bin\Debug\projetSIABD.Tests.dll
+C:\Users\Emmanuel\Desktop\siabd\github\projetSIABD\projetSIABD.Tests\bin\Debug\projetSIABD.Tests.pdb
+C:\Users\Emmanuel\Desktop\siabd\github\projetSIABD\projetSIABD.Tests\bin\Debug\projetSIABD.dll
+C:\Users\Emmanuel\Desktop\siabd\github\projetSIABD\projetSIABD.Tests\bin\Debug\projetSIABD.pdb
+C:\Users\Emmanuel\Desktop\siabd\github\projetSIABD\projetSIABD.Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Emmanuel\Desktop\siabd\github\projetSIABD\projetSIABD.Tests\obj\Debug\projetSIABD.Tests.dll
+C:\Users\Emmanuel\Desktop\siabd\github\projetSIABD\projetSIABD.Tests\obj\Debug\projetSIABD.Tests.pdb
