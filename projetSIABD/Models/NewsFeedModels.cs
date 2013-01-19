@@ -32,9 +32,10 @@ namespace projetSIABD.Models
         public List<messageWithComments> ListOfNew { get; set; }
         public messagesdbs aux { get; set; }
         public commentsdbs aux2 { get; set; }
-        public int currentuser { get; set; }
+        public int currentUser { get; set; }
+        public bool isAdmin { get; set; }
 
-        public newsFeedModels(List<messagesdbs> listOfMessages, string name)
+        public newsFeedModels(List<messagesdbs> listOfMessages, string name, bool role)
         {
             var tmp1 = new List<messageWithComments>();
             foreach (var item in listOfMessages)
@@ -45,7 +46,8 @@ namespace projetSIABD.Models
             ListOfNew = tmp1;
                         
             my_aspnet_users user = db.my_aspnet_users.Where(a => a.name.Equals(name)).FirstOrDefault();
-            currentuser = user.id;
+            currentUser = user.id;
+            isAdmin = role;
         }
     }
 }

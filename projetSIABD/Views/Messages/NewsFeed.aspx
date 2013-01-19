@@ -43,6 +43,12 @@
             important
         </th>
         <th></th>
+        <th>
+            <% if (Model.isAdmin == true)
+               {%>
+                moderer
+            <% } %>
+        </th>
     </tr>
 
 <% foreach (var item in Model.ListOfNew) { %>
@@ -67,6 +73,18 @@
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.nouvelle.important) %>
+        </td>
+        <td>
+            <% if (item.nouvelle.author == Model.currentUser)
+               { %>
+                 <%: Html.ActionLink("Supprimer mon message", "DeleteMyMessage", new { id = item.nouvelle.messageID })%>
+            <% } %>
+        </td>
+        <td>
+            <% if (Model.isAdmin == true)
+               {%>
+                     <%: Html.ActionLink("Modérer ce message", "ModerateMessage", new { id = item.nouvelle.messageID })%>
+            <% } %>
         </td>
     </tr>
     <% //here begin the comments %>
@@ -97,7 +115,7 @@
         </td>
     </tr>
     <tr>
-        <% if (item.likes.Where(a => a.liker.Equals(Model.currentuser)).Count() == 0) { %>         
+        <% if (item.likes.Where(a => a.liker.Equals(Model.currentUser)).Count() == 0) { %>         
         <td>
             <%: Html.ActionLink("J'aime", "LikeANew", "Like", new { id=item.nouvelle.messageID }, null) %>
         </td>
