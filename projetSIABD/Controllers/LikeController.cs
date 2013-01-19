@@ -65,17 +65,27 @@ namespace projetSIABD.Controllers
 
         public ActionResult LikeANew(int id)
         {
+
             likesdbs likesdbs = new likesdbs();
             likesdbs.messageApproved = id;
-            //likesdbs.liker = User.Identity.Name;
-            //db.my_aspnet_user
-            if (ModelState.IsValid) // must be useless since no input error can occur
+
+            my_aspnet_users user = db.my_aspnet_users.Where(a => a.name.Equals(User.Identity.Name)).FirstOrDefault();
+            likesdbs.liker = user.id;
+
+            // si l'utilisateur a dejà aimé la nouvelle, on ne fait rien
+            //TODO
+
+            try
             {
                 db.likesdbs.AddObject(likesdbs);
                 db.SaveChanges();
-                return RedirectToAction("../Messages/NewsFeed");
+
+                return RedirectToAction("NewsFeed", "Messages");
             }
-            return RedirectToAction("../Messages/NewsFeed");
+            catch
+            {
+                return RedirectToAction("NewsFeed", "Messages");
+            }
         }
 
         //
@@ -83,14 +93,19 @@ namespace projetSIABD.Controllers
 
         public ActionResult DislikeANew(int id)
         {
-            if (ModelState.IsValid) // must be useless since no input error can occur
+            my_aspnet_users user = db.my_aspnet_users.Where(a => a.name.Equals(User.Identity.Name)).FirstOrDefault();
+            likesdbs likedbs = db.likesdbs.Where(l => l.messageApproved.Equals(id)).Where(l => l.liker.Equals(user.id)).FirstOrDefault();
+
+            try
             {
-                likesdbs likesdbs = db.likesdbs.Where(a => a.liker.Equals(1) && a.messageApproved.Equals(id)).Last();
-                db.likesdbs.DeleteObject(likesdbs);
+                db.likesdbs.DeleteObject(likedbs);
                 db.SaveChanges();
-                return RedirectToAction("../Messages/NewsFeed");
+                return RedirectToAction("NewsFeed", "messages");
             }
-            return RedirectToAction("../Messages/NewsFeed");
+            catch
+            {
+                return RedirectToAction("NewsFeed", "messages");
+            }
         } 
 
         

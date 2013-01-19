@@ -54,7 +54,7 @@
             <%: Html.DisplayFor(modelItem => item.nouvelle.date) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.nouvelle.utilisateursdbs.firstname) %>
+            <%: Html.DisplayFor(modelItem => item.nouvelle.author) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.nouvelle.content) %>
@@ -76,7 +76,7 @@
             <%: Html.DisplayFor(modelItem => helper.messagesdbs.content) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => helper.utilisateursdbs.firstname) %>
+            <%: Html.DisplayFor(modelItem => helper.messagesdbs.author) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => helper.content) %>
@@ -97,24 +97,28 @@
         </td>
     </tr>
     <tr>
-        <% if (item.likes.Where(a => a.liker.Equals(1)) != null) { %>         
+        <% if (item.likes.Where(a => a.liker.Equals(Model.currentuser)).Count() == 0) { %>         
         <td>
-            <%: Html.ActionLink("J'aime", "../Like/LikeANew", new { id=item.nouvelle.messageID }) %>
+            <%: Html.ActionLink("J'aime", "LikeANew", "Like", new { id=item.nouvelle.messageID }, null) %>
         </td>
         <td>
             <% if (item.nbLikes > 1) { %> 
             <%: item.nbLikes %> personnes aiment ce message
-            <% } else {%>
-            <%: item.nbLikes %> personne aime ce message
+            <% } else if (item.nbLikes == 1){%>
+            une personne aime ce message
+            <% } else { %>
+            soyez le premier a aimer ce message !
             <% } %>
         </td>
         <% } else {%>
         <td>
-            <%: Html.ActionLink("Je n'aime plus", "DislikeANew", "Like", new { id=item.nouvelle.messageID }) %>
+            <%: Html.ActionLink("Je n'aime plus", "DislikeANew", "Like", new { id=item.nouvelle.messageID }, null) %>
         </td>
         <td>
-            <% if (item.nbLikes - 1 > 1) { %> 
+            <% if (item.nbLikes > 1) { %> 
             vous et <%: item.nbLikes - 1 %> personnes aiment ce message
+            <% } else {%>
+            vous aimez ce message
             <% } %>
         </td>
         <% } %>

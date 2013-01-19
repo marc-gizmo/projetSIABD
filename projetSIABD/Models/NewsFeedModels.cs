@@ -26,15 +26,15 @@ namespace projetSIABD.Models
         }
     }
 
-
     public class newsFeedModels
     {
         MySQLEntities db = new MySQLEntities();
         public List<messageWithComments> ListOfNew { get; set; }
         public messagesdbs aux { get; set; }
         public commentsdbs aux2 { get; set; }
+        public int currentuser { get; set; }
 
-        public newsFeedModels(List<messagesdbs> listOfMessages)
+        public newsFeedModels(List<messagesdbs> listOfMessages, string name)
         {
             var tmp1 = new List<messageWithComments>();
             foreach (var item in listOfMessages)
@@ -43,7 +43,9 @@ namespace projetSIABD.Models
                 tmp1.Add(tmp2);
             }
             ListOfNew = tmp1;
-
+                        
+            my_aspnet_users user = db.my_aspnet_users.Where(a => a.name.Equals(name)).FirstOrDefault();
+            currentuser = user.id;
         }
     }
 }

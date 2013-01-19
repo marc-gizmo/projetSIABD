@@ -18,7 +18,12 @@ namespace projetSIABD.Controllers
 
         public ViewResult Index()
         {
-            var messagesdbs = db.messagesdbs.Include(db.my_aspnet_users.ToString()).Include(db.themesdbs.ToString());
+            var messagesdbs = from m in db.messagesdbs
+                                  join u in db.my_aspnet_users on m.author equals u.id
+                                  join t in db.themesdbs on m.theme equals t.themeId
+                                  select new messagesdbs { content = m.content, author = m.author, messageID = m.messageID};
+            IEnumerable<messagesdbs> data = messagesdbs.ToList();
+
             return View(messagesdbs.ToList());
         }
 
@@ -30,10 +35,9 @@ namespace projetSIABD.Controllers
             //var messagesdbs = db.messagesdbs.Include("my_aspnet_users").Include("themesdbs");
             var messagesdbstest = from m in db.messagesdbs
                               join u in db.my_aspnet_users on m.author equals u.id
-                              //join t in db.themesdbs on m.theme equals t.themeId
-                              select m;
-            List<messagesdbs> tmp = messagesdbstest.ToList();
-            var data = new projetSIABD.Models.newsFeedModels(tmp, User.Identity.Name);
+                              join t in db.themesdbs on m.theme equals t.themeId
+                              select new messagesdbs { content = m.content, author = m.author, messageID = m.messageID, censored = m.censored, date = m.date, important = m.important};
+            IEnumerable<messagesdbs> data = messagesdbstest.ToList();
             return View(data);
         }
 
@@ -79,6 +83,8 @@ namespace projetSIABD.Controllers
 
         public ActionResult CreateANew()
         {
+            ViewData["author"] = new SelectList(db.my_aspnet_users, "ID", "firstname");
+            ViewData["theme"] = new SelectList(db.themesdbs, "themeId", "name");
             return View();
         }
 
@@ -88,23 +94,21 @@ namespace projetSIABD.Controllers
         [HttpPost]
         public ActionResult CreateANew(messagesdbs messagesdbs)
         {
-            my_aspnet_users user = db.my_aspnet_users.Where(a => a.name.Equals(User.Identity.Name)).FirstOrDefault();
-            messagesdbs.author = user.id;
+            messagesdbs.author = 1;
             messagesdbs.censored = 0;
             messagesdbs.important = 0;
             messagesdbs.date = DateTime.Now;
 
-            try
+            if (ModelState.IsValid)
             {
                 db.messagesdbs.AddObject(messagesdbs);
                 db.SaveChanges();
-
                 return RedirectToAction("NewsFeed");
             }
-            catch
-            {
-                return View(messagesdbs);
-            }
+
+            ViewData["author"] = new SelectList(db.my_aspnet_users, "ID", "firstname", messagesdbs.author);
+            ViewData["theme"] = new SelectList(db.themesdbs, "themeId", "name", messagesdbs.theme);
+            return View(messagesdbs);
         }
         
         //
