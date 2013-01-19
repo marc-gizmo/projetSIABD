@@ -18,106 +18,68 @@
 </p>
 
 <h2>Dernières parutions</h2>
-
 <table>
-    <tr>
-        <th>
-            messageID
-        </th>
-        <th>
-            date
-        </th>
-        <th>
-            utilisateursdbs
-        </th>
-        <th>
-            content
-        </th>
-        <th>
-            themesdbs
-        </th>
-        <th>
-            censored
-        </th>
-        <th>
-            important
-        </th>
-        <th></th>
-        <th>
-            <% if (Model.isAdmin == true)
-               {%>
-                moderer
-            <% } %>
-        </th>
-    </tr>
-
 <% foreach (var item in Model.ListOfNew) { %>
     <tr>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.nouvelle.messageID) %>
-        </td>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.nouvelle.date) %>
-        </td>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.nouvelle.author) %>
-        </td>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.nouvelle.content) %>
-        </td>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.nouvelle.themesdbs.name) %>
-        </td>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.nouvelle.censored) %>
-        </td>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.nouvelle.important) %>
-        </td>
-        <td>
-            <% if (item.nouvelle.author == Model.currentUser)
+        <th>
+            Le <%: Html.DisplayFor(modelItem => item.nouvelle.nouvelle.date.DayOfYear)%>/<%: Html.DisplayFor(modelItem => item.nouvelle.nouvelle.date.Month)%>
+        </th>
+        <th>
+            <%: Html.DisplayFor(modelItem => item.nouvelle.author) %> a écrit : 
+        </th>
+        <th>
+            " <%: Html.DisplayFor(modelItem => item.nouvelle.nouvelle.content)%> "
+        </th>
+        <th>
+            <%: Html.DisplayFor(modelItem => item.nouvelle.nouvelle.themesdbs.name)%>
+        </th>
+        <th>
+            <% if (item.nouvelle.nouvelle.author == Model.currentUser)
                { %>
-                 <%: Html.ActionLink("Supprimer mon message", "DeleteMyMessage", new { id = item.nouvelle.messageID })%>
+                 <%: Html.ActionLink("Supprimer mon message", "DeleteMyMessage", new { id = item.nouvelle.nouvelle.messageID })%>
             <% } %>
-        </td>
-        <td>
+        </th>
+        <th>
             <% if (Model.isAdmin == true)
                {%>
-                     <%: Html.ActionLink("Modérer ce message", "ModerateMessage", new { id = item.nouvelle.messageID })%>
+                     <%: Html.ActionLink("Modérer ce message", "ModerateMessage", new { id = item.nouvelle.nouvelle.messageID })%>
             <% } %>
-        </td>
+        </th>
     </tr>
     <% //here begin the comments %>
     <% foreach (var helper in item.associatedComments) { %>
     <tr>
+    <td></td>
         <td>
-            <%: Html.DisplayFor(modelItem => helper.messagesdbs.content) %>
+            <%: Html.DisplayFor(modelItem => helper.author)%> a commenté ce message : 
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => helper.messagesdbs.author) %>
+           " <%: Html.DisplayFor(modelItem => helper.content) %> "
+        </td>
+        <td></td>
+        <td>
+            <% if (helper.author == Model.currentUser)
+               { %>
+                 <%: Html.ActionLink("Supprimer mon commentaire", "DeleteMyComment", "Comments", new { id = item.nouvelle.nouvelle.messageID }, null)%>
+            <% } %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => helper.content) %>
-        </td>
-        <td>
-            <%: Html.DisplayFor(modelItem => helper.date) %>
-        </td>
-        <td>
-            <%: Html.ActionLink("Edit", "Edit", new { id=helper.ID }) %> |
-            <%: Html.ActionLink("Details", "Details", new { id=helper.ID }) %> |
-            <%: Html.ActionLink("Delete", "Delete", new { id=helper.ID }) %>
+            <% if (Model.isAdmin == true)
+               {%>
+                     <%: Html.ActionLink("Modérer ce commentaire", "ModerateComment", "Comments", new { id = item.nouvelle.nouvelle.messageID }, null)%>
+            <% } %>
         </td>
     </tr>
     <% } %>
     <tr>
         <td>
-            <%: Html.ActionLink("Commenter la nouvelle", "CreateAComment", "Comments", new { id=item.nouvelle.messageID }, null) %>
+            <%: Html.ActionLink("Commenter la nouvelle", "CreateAComment", "Comments", new { id = item.nouvelle.nouvelle.messageID }, null)%>
         </td>
     </tr>
     <tr>
         <% if (item.likes.Where(a => a.liker.Equals(Model.currentUser)).Count() == 0) { %>         
         <td>
-            <%: Html.ActionLink("J'aime", "LikeANew", "Like", new { id=item.nouvelle.messageID }, null) %>
+            <%: Html.ActionLink("J'aime", "LikeANew", "Like", new { id = item.nouvelle.nouvelle.messageID }, null)%>
         </td>
         <td>
             <% if (item.nbLikes > 1) { %> 
@@ -130,7 +92,7 @@
         </td>
         <% } else {%>
         <td>
-            <%: Html.ActionLink("Je n'aime plus", "DislikeANew", "Like", new { id=item.nouvelle.messageID }, null) %>
+            <%: Html.ActionLink("Je n'aime plus", "DislikeANew", "Like", new { id = item.nouvelle.nouvelle.messageID }, null)%>
         </td>
         <td>
             <% if (item.nbLikes > 1) { %> 
@@ -141,6 +103,7 @@
         </td>
         <% } %>
     </tr>
+    <tr><td><br /></td></tr>
 
 <% } %>
 

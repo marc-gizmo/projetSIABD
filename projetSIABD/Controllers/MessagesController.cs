@@ -20,10 +20,10 @@ namespace projetSIABD.Controllers
         {
             //var messagesdbs = db.messagesdbs.Include("my_aspnet_users").Include("themesdbs");
             var messagesdbstest = from m in db.messagesdbs
-                              join u in db.my_aspnet_users on m.author equals u.id
-                              //join t in db.themesdbs on m.theme equals t.themeId
-                              select m;
-            List<messagesdbs> tmp = messagesdbstest.ToList();
+                                  join u in db.my_aspnet_users on m.author equals u.id
+                                  //join t in db.themesdbs on m.theme equals t.themeId
+                                  select new projetSIABD.Models.messageWithJoin  { nouvelle = m, author = u.name };
+            List<projetSIABD.Models.messageWithJoin> tmp = messagesdbstest.ToList();
             var data = new projetSIABD.Models.newsFeedModels(tmp, User.Identity.Name, User.IsInRole("administrateur"));
             return View(data);
         }
