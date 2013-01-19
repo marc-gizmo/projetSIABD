@@ -93,7 +93,7 @@
     <% } %>
     <tr>
         <td>
-            <%: Html.ActionLink("Commenter la nouvelle", "CreateAComment", "Comments", new { id=item.nouvelle.messageID }) %>
+            <%: Html.ActionLink("Commenter la nouvelle", "CreateAComment", "Comments", new { id=item.nouvelle.messageID }, null) %>
         </td>
     </tr>
     <tr>

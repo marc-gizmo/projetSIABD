@@ -57,16 +57,21 @@ namespace projetSIABD.Controllers
         [HttpPost]
         public ActionResult CreateAComment(commentsdbs commentsdbs)
         {
-            commentsdbs.author = 1;
+            my_aspnet_users user = db.my_aspnet_users.Where(a => a.name.Equals(User.Identity.Name)).FirstOrDefault();
+            commentsdbs.author = user.id;
             commentsdbs.date = DateTime.Now;
 
-            if (ModelState.IsValid)
+            try
             {
                 db.commentsdbs.AddObject(commentsdbs);
                 db.SaveChanges();
-                return RedirectToAction("../Messages/NewsFeed");
+
+                return RedirectToAction("NewsFeed", "Messages");
             }
-            return View(commentsdbs);
+            catch
+            {
+                return View(commentsdbs);
+            }
         }
 
 
