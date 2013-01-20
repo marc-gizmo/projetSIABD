@@ -1,33 +1,33 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<projetSIABD.Models.UserModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	Details
+	Details d'un utilisateur
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>Details</h2>
+    <h2>Details d'un utilisateur</h2>
 
     <fieldset>
-        <legend>Fields</legend>
+        
         <table>
         <tr>
            
             <th>
-                userId
+                Identifiant
             </th>
             <th>
-                userName
+                Nom
             </th>
             <th>
                 Email
             </th>
             <th>
-                Comment
+                Commentaire
             </th>
             
             <th>
-                IsApproved
+                Autorisé
             </th>         
             
             
@@ -59,12 +59,12 @@
 
     </table>
                      
-        
-    </fieldset>
+    </fieldset>    
+    
     <p>
 
-        <%: Html.ActionLink("Edit", "Edit", new { id=Model.membership.userId }) %> |
-        <%: Html.ActionLink("Back to List", "Index") %>
+        <%: Html.ActionLink("Editer", "Edit", new { id=Model.membership.userId }) %> |
+        <%: Html.ActionLink("Index des utilisateurs", "Index") %>
     </p>
 
 </asp:Content>

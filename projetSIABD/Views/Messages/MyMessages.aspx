@@ -1,23 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<projetSIABD.Models.newsFeedModels>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Fil d'actualité
+    Mes messages
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Fil d'actualité</h2>
+<h2>Mes messages :</h2>
 
-<h2>Publier une nouvelle</h2>
-
-<script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
-<script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
-
-<p>
-    <%: Html.ActionLink("Publier une nouvelle", "CreateANew", null, new { @class = "btn" })%>
-</p>
-
-<h2>Dernières parutions</h2>
 <table>
 <% foreach (var item in Model.ListOfNew) { %>
     <tr>
@@ -30,7 +20,7 @@
         <th>
             " <%: Html.DisplayFor(modelItem => item.nouvelle.nouvelle.content)%> "
         </th>
-        <th>Theme : 
+        <th>theme : 
             <%: Html.DisplayFor(modelItem => item.nouvelle.nouvelle.themesdbs.name)%>
         </th>
         <th>

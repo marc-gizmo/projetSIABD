@@ -1,25 +1,32 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<projetSIABD.my_aspnet_membership>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<projetSIABD.Models.UserModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	Delete
+	Supprimer un utilisateur
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>Delete</h2>
+    <h2>Supprimer un utilisateur</h2>
 
-    <h3>Are you sure you want to delete this?</h3>
+    <h3>Etes-vous sûr de vouloir supprimer l'utilisateur suivant ?</h3>
        
     <fieldset>
-        <legend>Fields</legend>
-        
-        <div class="display-label">userId</div>
-        <div class="display-field"><%: Model.userId %></div>
-       
-        <div class="display-label">Email</div>
-        <div class="display-field"><%: Model.Email %></div>
-      
-             
+        <table>
+            <tr>
+                <th>Identifiant</th>
+                <th>Nom</th>
+                <th>Email</th>
+                <th>Commentaire</th>
+                <th>Autorisé</th>
+            </tr>
+            <tr>
+                <td><%: Model.membership.userId %></td>
+                <td><%: Model.UserName %></td>
+                <td><%: Model.membership.Email %></td>
+                <td><%: Model.membership.Comment %></td>
+                <td><%: Model.membership.IsApproved %></td>
+            </tr>
+        </table>             
         
         
     </fieldset>
@@ -28,8 +35,8 @@
        <%: Html.ValidationSummary(true) %>
         <p>
          
-		    <input type="submit" value="Delete" /> |
-		    <%: Html.ActionLink("Back to List", "Index")%>
+		    <input type="submit" value="Supprimer" /> |
+		    <%: Html.ActionLink("Index des utilisateurs", "Index")%>
         </p>
     <% } %>
 

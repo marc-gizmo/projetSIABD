@@ -1,22 +1,22 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<projetSIABD.Models.RolesWithUserModels>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	DeleteUser
+	Enlever un rôle à un utilisateur
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>DeleteUser</h2>
+    <h2>Enlever un rôle à un utilisateur</h2>
 
-    <h3>Are you sure you want to delete this?</h3>
+    <h3>Etes-vous sûr de vouloir le rôle à cet utilisateur ?</h3>
     <fieldset>
-        <legend>Fields</legend>
+        
         <table>
             <tr>
-                <th>UserId</th>
-                <th>UserName</th>
-                <th>RoleId</th>
-                <th>RoleName</th>
+                <th>Utilisateur</th>
+                <th>Nom d'utilisateur</th>
+                <th>Rôle</th>
+                <th>Nom du rôle</th>
             </tr>
             <tr>
                 <td><%: Model.UserId %></td>
@@ -34,8 +34,8 @@
             <%: Html.HiddenFor(model => Model.UserName) %>
             <%: Html.HiddenFor(model => Model.RoleId) %>
             <%: Html.HiddenFor(model => Model.RoleName) %>
-		    <input type="submit" value="Delete" /> |
-		    <%: Html.ActionLink("Back to List", "Index") %>
+		    <input type="submit" value="Supprimer" /> |
+		    <%: Html.ActionLink("Index des rôles", "Index") %>
         </p>
     <% } %>
 

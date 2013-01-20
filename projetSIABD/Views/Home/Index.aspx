@@ -7,6 +7,23 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: ViewData["Message"] %></h2>
     <p>
-        Pour en savoir plus sur ASP.NET MVC, visitez <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
+        Connectez vous pour accéder au contenu du site.
+        <br />
+        
+        <%
+            if (Request.IsAuthenticated) {
+        %>
+                Bienvenue <b><%: Page.User.Identity.Name %></b>!
+                <br /><br />
+                <%: Html.ActionLink("Accéder au fil d'actualité", "NewsFeed", "Messages", null, new { @class = "btn" }) %>
+                 <%: Html.ActionLink("Fermer la session", "LogOff", "Account", null, new { @class = "btn" })%> 
+        <%
+        }
+        else {
+        %> 
+             <%: Html.ActionLink("Ouvrir une session", "LogOn", "Account", null, new { @class = "btn" })%> 
+        <%
+        }
+        %>
     </p>
 </asp:Content>

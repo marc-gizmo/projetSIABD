@@ -102,6 +102,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-responsive.css" />
+    <Content Include="Content\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Views\Boss\Index.aspx" />
     <Content Include="Views\Comments\Create.aspx" />
@@ -115,6 +119,7 @@
     <Content Include="Views\Like\Details.aspx" />
     <Content Include="Views\Like\Edit.aspx" />
     <Content Include="Views\Like\Index.aspx" />
+    <Content Include="Views\Messages\MyMessages.aspx" />
     <Content Include="Views\Messages\CreateThemedNew.aspx" />
     <Content Include="Views\Messages\CreateANew.aspx" />
     <Content Include="Views\Messages\Index.aspx" />
@@ -191,7 +196,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>56747</DevelopmentServerPort>
+          <DevelopmentServerPort>50589</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

@@ -21,12 +21,68 @@ namespace projetSIABD.Controllers
             //var messagesdbs = db.messagesdbs.Include("my_aspnet_users").Include("themesdbs");
             var messagesdbstest = from m in db.messagesdbs
                                   join u in db.my_aspnet_users on m.author equals u.id
-
                                   join t in db.themesdbs on m.theme equals t.themeId
-                                  select new projetSIABD.Models.messageWithJoin  { nouvelle = m, author = u.name, theme = t.name };
-            List<projetSIABD.Models.messageWithJoin> tmp = messagesdbstest.OrderByDescending(t => t.nouvelle.date).ToList();
+                                  select new projetSIABD.Models.messageWithJoin { nouvelle = m, author = u.name, theme = t.name };
+
+            //on selectionne les messages sans theme
+            List<projetSIABD.Models.messageWithJoin> aux2 = messagesdbstest.ToList();
+            List<projetSIABD.Models.messageWithJoin> tmp = aux2.Where(t => t.theme.Equals("defaut")).ToList();
+
+            // on recupère la liste des themes où l'utilisateur est abonné
+            my_aspnet_users moi = db.my_aspnet_users.Where(a => a.name.Equals(User.Identity.Name)).FirstOrDefault();
+            var list = from a in db.abonnesdbs
+                       select a;
+            list = list.Where(l => l.user.Equals(moi.id));
+            foreach (var i in list)
+            {
+                var aux = aux2.Where(a => a.nouvelle.theme.Equals(i.theme)).ToList();
+                foreach (var j in aux)
+                {
+                    tmp.Add(j);
+                }
+            }
+
+            tmp = tmp.OrderByDescending(t => t.nouvelle.date).ToList();
+            var data = new projetSIABD.Models.newsFeedModels(tmp, User.Identity.Name, User.IsInRole("administrateur"));
+            return View(data);
+        }
+
+
+        //
+        // GET: /Messages/MyMessages
+
+        [Authorize()]
+        public ViewResult MyMessages()
+        {
+            my_aspnet_users moi = db.my_aspnet_users.Where(a => a.name.Equals(User.Identity.Name)).FirstOrDefault();
+
+            var messagesdbstest = from m in db.messagesdbs
+                                  join u in db.my_aspnet_users on m.author equals u.id
+                                  join t in db.themesdbs on m.theme equals t.themeId
+                                  select new projetSIABD.Models.messageWithJoin { nouvelle = m, author = u.name, theme = t.name };
+
+            //on prend les nouvelles de l'utilisateur
+            List<projetSIABD.Models.messageWithJoin> tmp = messagesdbstest.Where(m => m.nouvelle.author.Equals(moi.id)).ToList();
+            //List<projetSIABD.Models.messageWithJoin> tmp = messagesdbstest.ToList();
+            //tmp = tmp.Where(t => t.author.Equals(moi.id)).ToList();
+
+            
+            //on prend aussi les commentaires de l'utilisateur (on les ajoute à la liste tmp)
+            var commentsdbs = from m in db.commentsdbs
+                              select m;
+            List<commentsdbs> tmp2 = commentsdbs.Where(c => c.author.Equals(moi.id)).ToList();
+            foreach (var i in tmp2)
+            {
+                var aux = messagesdbstest.Where(m => m.nouvelle.messageID.Equals(i.messageId)).ToList().LastOrDefault();
+                if (tmp.Exists(t => t.nouvelle.messageID.Equals(aux.nouvelle.messageID))) { }//si on a deja cette nouvelle, on ne l'ajoute pas 
+                else { tmp.Add(aux); }
+            }
+
+            tmp = tmp.Distinct().OrderByDescending(t => t.nouvelle.date).ToList();
+            
 
             var data = new projetSIABD.Models.newsFeedModels(tmp, User.Identity.Name, User.IsInRole("administrateur"));
+
             return View(data);
         }
 

@@ -5,7 +5,12 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <link href="../../Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
@@ -13,7 +18,7 @@
 
         <div id="header">
             <div id="title">
-                <h1>Mon application MVC</h1>
+                <h1>Projet SIABD</h1>
             </div>
               
             <div id="logindisplay">
@@ -24,8 +29,8 @@
             
                 <ul id="menu">              
                     <li><%: Html.ActionLink("Accueil", "Index", "Home")%></li>
-                    <li><%: Html.ActionLink("À propos de", "About", "Home")%></li>
                     <li><%: Html.ActionLink("Fil d'actualités","NewsFeed","Messages") %></li>
+                    <li><%: Html.ActionLink("Mes messages","MyMessages","Messages") %></li>
                     <li><%: Html.ActionLink("Voir les thèmes", "Index", "Themes") %></li>
                     <li><%: Html.ActionLink("Statistiques du site","Index","Boss")%></li>
                     <li><%: Html.ActionLink("Administrer Users", "Index", "User")%></li>
@@ -39,6 +44,11 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server" />
 
             <div id="footer">
+                <p>
+                Site réalisé par E. Viratelle et M. Balemboy dans le cadre de l'option SIABD de l'ENSIIE - 2012/2013
+                <br />
+                <%: Html.ActionLink("About us.", "About", "Home")%>
+                </p>
             </div>
         </div>
     </div>

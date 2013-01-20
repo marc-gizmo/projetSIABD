@@ -17,7 +17,7 @@
         <legend>publier une nouvelle</legend>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.content) %>
+            Entrez le contenu de votre message :
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.content) %>
@@ -31,7 +31,7 @@
 <% } %>
 
 <div>
-    <%: Html.ActionLink("Back to List", "Index") %>
+    <%: Html.ActionLink("Back to List", "NewsFeed") %>
 </div>
 
 </asp:Content>
