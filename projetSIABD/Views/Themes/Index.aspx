@@ -33,18 +33,22 @@
             <td><%: item.theme.name %></td>
             <td><%: item.nbUser%></td>
             <td>
-                <%: Html.ActionLink("Edit", "Edit", new { id=item.theme.themeId }) %> |
-               
-                <%: Html.ActionLink("Delete", "Delete", new { id=item.theme.themeId })%>
-            </td>
-            <% if (item.isInTheme == 0)
+            <% if (Page.User.IsInRole("Administrateur"))
                { %>
-            <td></td>
-            <% }
-               else
-               {  %>
-            <td><%: Html.ActionLink("Poster une News dans ce theme", "CreateThemedNew", "Messages", new { themeId = item.theme.themeId }, null)%></td>
+                <%: Html.ActionLink("Edit", "Edit", new { id = item.theme.themeId })%> |
+               
+                <%: Html.ActionLink("Delete", "Delete", new { id = item.theme.themeId })%>
             <% } %>
+            
+            <% if (item.isInTheme != 0)           
+               {
+                   if (Page.User.IsInRole("Administrateur"))
+                   { %>
+               | 
+               <% } %>
+                <%: Html.ActionLink("Poster une News dans ce theme", "CreateThemedNew", "Messages", new { themeId = item.theme.themeId }, null)%>
+            <% } %>
+            </td>
         </tr>
     
     <% } %>
@@ -52,7 +56,7 @@
     </table>
 
     <p>
-        <%: Html.ActionLink("Create New", "Create") %>
+        <%: Html.ActionLink("Create un nouveau thème", "Create") %>
     </p>
 
 </asp:Content>

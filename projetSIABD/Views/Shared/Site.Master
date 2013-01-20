@@ -32,9 +32,13 @@
                     <li><%: Html.ActionLink("Fil d'actualités","NewsFeed","Messages") %></li>
                     <li><%: Html.ActionLink("Mes messages","MyMessages","Messages") %></li>
                     <li><%: Html.ActionLink("Voir les thèmes", "Index", "Themes") %></li>
+                    <% if (Page.User.IsInRole("boss")) { %>
                     <li><%: Html.ActionLink("Statistiques du site","Index","Boss")%></li>
+                    <% } %>
+                    <% if (Page.User.IsInRole("Administrateur")) { %>
                     <li><%: Html.ActionLink("Administrer Users", "Index", "User")%></li>
                     <li><%: Html.ActionLink("Administrer Roles", "Index", "Roles")%></li>
+                    <% } %>
                 </ul>
             
             </div>
