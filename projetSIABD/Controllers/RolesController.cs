@@ -119,20 +119,22 @@ namespace projetSIABD.Controllers
         {
             var roles = from p in db.my_aspnet_roles
                         select p.name ;
-
+            
             var user = from u in db.my_aspnet_users
+                       join m in db.my_aspnet_membership on u.id equals m.userId
+                       where (m.IsLockedOut == false)
                        select u.name ;
 
             List<SelectListItem> tablRole = new List<SelectListItem>();
-            foreach (var item in db.my_aspnet_roles)
+            foreach (var item in roles)
             {
-                tablRole.Add(new SelectListItem { Text = item.name, Value = item.name });
+                tablRole.Add(new SelectListItem { Text = item, Value = item });
             }
 
             List<SelectListItem> tablUser = new List<SelectListItem>();
-            foreach (var item2 in db.my_aspnet_users)
+            foreach (var item2 in user)
             {
-                tablUser.Add(new SelectListItem { Text = item2.name, Value = item2.name });
+                tablUser.Add(new SelectListItem { Text = item2, Value = item2 });
             }
 
             RoleAddModels model = new RoleAddModels();

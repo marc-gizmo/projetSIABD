@@ -1,21 +1,21 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<projetSIABD.Models.RolesIndexModels>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	Index
+	Index des rôles
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>Index</h2>
+    <h2>Index des rôles</h2>
 
     <table>
         <caption>Listes des roles</caption>
         <tr>
             <th>
-                RoleId
+                Identifiant
             </th>
             <th>
-                RoleName
+                Nom du rôle
             </th>
             <th></th>
         </tr>
@@ -28,14 +28,14 @@
                 <%: item.name %>
             </td>
             <td>
-                <%: Html.ActionLink("Delete", "Delete", new { id = item.id }) %>
+                <%: Html.ActionLink("Supprimer", "Delete", new { id = item.id }) %>
             </td>
         </tr>
         <% } %>
     </table>
 
     <p>
-        <%: Html.ActionLink("Create New Role", "Create") %>
+        <%: Html.ActionLink("Créer un nouveau rôle", "Create") %>
     </p>
 
     <table>
@@ -43,16 +43,16 @@
         <tr>
             
             <th>
-                UserId
+                Utilisateur
             </th>
             <th>
-                UserName
+                Nom d'utilisateur
             </th>
             <th>
-                RoleId
+                Rôle
             </th>
             <th>
-                RoleName
+                Nom du rôle
             </th>
             <th></th>
         </tr>
@@ -74,7 +74,7 @@
                 <%: item2.RoleName %>
             </td>
             <td>
-                <%: Html.ActionLink("Delete", "DeleteUser", item2)%>
+                <%: Html.ActionLink("Supprimer la ligne", "DeleteUser", item2)%>
             </td>
         </tr>
     

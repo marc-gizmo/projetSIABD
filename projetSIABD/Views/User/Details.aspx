@@ -1,35 +1,70 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<projetSIABD.my_aspnet_membership>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<projetSIABD.Models.UserModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	Details
+	Details d'un utilisateur
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>Details</h2>
+    <h2>Details d'un utilisateur</h2>
 
     <fieldset>
-        <legend>Fields</legend>
         
-        <div class="display-label">userId</div>
-        <div class="display-field"><%: Model.userId %></div>
-        
-        <div class="display-label">Email</div>
-        <div class="display-field"><%: Model.Email %></div>
-        
-        <div class="display-label">Comment</div>
-        <div class="display-field"><%: Model.Comment %></div>
-        
-              
-        <div class="display-label">IsApproved</div>
-        <div class="display-field"><%: Model.IsApproved %></div>
+        <table>
+        <tr>
+           
+            <th>
+                Identifiant
+            </th>
+            <th>
+                Nom
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Commentaire
+            </th>
+            
+            <th>
+                Autorisé
+            </th>         
+            
+            
+        </tr>
+    
+        <tr>
+          
+            <td>
+                <%: Model.membership.userId %>
+            </td>
+            <td>
+                <%: Model.UserName %>
+            </td>
+            <td>
+                <%: Model.membership.Email %>
+            </td>
+            <td>
+                <%: Model.membership.Comment %>
+            </td>
+            
+            <td>
+                <%: Model.membership.IsApproved %>
+            </td>
+                        
+           
+        </tr>
+    
+
+
+    </table>
                      
-        
-    </fieldset>
+    </fieldset>    
+    
     <p>
 
-        <%: Html.ActionLink("Edit", "Edit", new { id=Model.userId }) %> |
-        <%: Html.ActionLink("Back to List", "Index") %>
+        <%: Html.ActionLink("Editer", "Edit", new { id=Model.membership.userId }) %> |
+        <%: Html.ActionLink("Index des utilisateurs", "Index") %>
     </p>
 
 </asp:Content>

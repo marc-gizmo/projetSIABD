@@ -96,6 +96,7 @@ namespace projetSIABD.Controllers
 
             tmp = tmp.Distinct().OrderByDescending(t => t.nouvelle.date).ToList();
             
+
             var data = new projetSIABD.Models.newsFeedModels(tmp, User.Identity.Name, User.IsInRole("administrateur"));
 
             return View(data);

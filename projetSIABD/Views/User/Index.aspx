@@ -1,31 +1,31 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<projetSIABD.Models.UserModel>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	Index
+	Index des utilisateurs
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>Index</h2>
+    <h2>Index des utilisateurs</h2>
 
     <table>
         <tr>
            
             <th>
-                userId
+                Identifiant
             </th>
             <th>
-                userName
+                Nom
             </th>
             <th>
                 Email
             </th>
             <th>
-                Comment
+                Commentaire
             </th>
             
             <th>
-                IsApproved
+                Autorisé
             </th>
             
             
@@ -54,9 +54,9 @@
             </td>
             
              <td>
-                <%: Html.ActionLink("Edit", "Edit", new { id=item.membership.userId }) %> |
-                <%: Html.ActionLink("Details", "Details", new { id=item.membership.userId })%> |
-                <%: Html.ActionLink("Delete", "Delete", new { id=item.membership.userId })%>
+                <%: Html.ActionLink("Editer", "Edit", new { id=item.membership.userId }) %> |
+                <%: Html.ActionLink("Détails", "Details", new { id=item.membership.userId })%> |
+                <%: Html.ActionLink("Supprimer", "Delete", new { id=item.membership.userId })%>
             </td>
            
         </tr>
@@ -64,9 +64,9 @@
     <% } %>
 
     </table>
-
+    <br />
     <p>
-        <%: Html.ActionLink("Create New", "Create") %>
+        <%: Html.ActionLink("Créer un nouvel utilisateur", "Create") %>
     </p>
 
 </asp:Content>

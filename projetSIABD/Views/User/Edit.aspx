@@ -1,33 +1,34 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<projetSIABD.Models.UserModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	Edit
+	Editer un utilisateur
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>Edit</h2>
+    <h2>Editer un utilisateur</h2>
 
     <% using (Html.BeginForm()) {%>
         <%: Html.ValidationSummary(true) %>
         
         <fieldset>
-            <legend>Fields</legend>
             
-            <div class="editor-label">
-                <%: Html.LabelFor(model => model.membership.userId) %>
-            </div>
-            <div class="editor-field">
-                <%: Model.membership.userId%>
-                <%: Html.Hidden("membership.userId",Model.membership.userId) %>
-            </div>
-            
-            <div class="editor-label"> Username </div>
-            <div class="editor-field"><%: Model.UserName %></div>
+            <table>
+                <tr>
+                    <th>Identifiant</th>
+                    <th>Nom</th>
+                </tr>
+                <tr>
+                    <td><%: Model.membership.userId%></td>
+                    <td><%: Model.UserName %></td>
+                </tr>
+            </table>
+            <%: Html.Hidden("membership.userId",Model.membership.userId) %>
             <%: Html.Hidden("UserName",Model.UserName) %>
+            
 
             <div class="editor-label">
-                <%: Html.LabelFor(model => model.membership.Email) %>
+                <b>Email</b>
             </div>
             <div class="editor-field">
                 <%: Html.TextBoxFor(model => model.membership.Email)%>
@@ -35,7 +36,7 @@
             </div>
             
             <div class="editor-label">
-                <%: Html.LabelFor(model => model.membership.Comment)%>
+                <b>Commentaire</b>
             </div>
             <div class="editor-field">
                 <%: Html.TextBoxFor(model => model.membership.Comment)%>
@@ -46,10 +47,10 @@
             
             
             <div class="editor-label">
-                <%: Html.LabelFor(model => model.membership.IsApproved)%>
+                <b>Autorisé</b>
             </div>
             <div class="editor-field">
-                <%: Html.TextBoxFor(model => (bool) model.membership.IsApproved)%>
+                <%: Html.TextBoxFor(model => model.membership.IsApproved)%>
                 <%: Html.ValidationMessageFor(model => model.membership.IsApproved)%>
             </div>
            
@@ -62,7 +63,7 @@
     <% } %>
 
     <div>
-        <%: Html.ActionLink("Back to List", "Index") %>
+        <%: Html.ActionLink("Index des utilisateurs", "Index") %>
     </div>
 
 </asp:Content>

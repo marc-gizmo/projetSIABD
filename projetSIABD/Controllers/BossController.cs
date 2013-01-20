@@ -18,6 +18,7 @@ namespace projetSIABD.Controllers
         {
             var model = from m in db.my_aspnet_membership
                         join u in db.my_aspnet_users on m.userId equals u.id
+                        where(u.id >=1 )
                         select new BossModels { UserName = u.name, membership = m };
 
 

@@ -44,16 +44,14 @@ namespace projetSIABD.Controllers
         [Authorize(Roles = "Administrateur")]
         public ActionResult Details(int id)
         {
-            my_aspnet_membership membership = db.my_aspnet_membership.FirstOrDefault();
-            foreach (my_aspnet_membership item in db.my_aspnet_membership)
-            {
-                if (item.userId == id)
-                {
-                    membership = item;
-                }
-            }
-            
-            return View(membership);
+            var temp = from m in db.my_aspnet_membership                      
+                        join u in db.my_aspnet_users on m.userId equals u.id
+                        where (u.id == id)
+                        select new UserModel { UserName = u.name, membership = m };
+
+            UserModel model = new UserModel();
+            model = temp.FirstOrDefault();
+            return View(model);
         }
 
         //
@@ -133,15 +131,13 @@ namespace projetSIABD.Controllers
         [Authorize(Roles = "Administrateur")]
         public ActionResult Delete(int id)
         {
-            var membership = db.my_aspnet_membership.FirstOrDefault();
-            foreach (var item in db.my_aspnet_membership)
-            {
-                if (item.userId == id)
-                {
-                    membership = item;
-                }
-            }
-            return View(membership);
+            var tabl = from m in db.my_aspnet_membership
+                       join u in db.my_aspnet_users on m.userId equals u.id
+                       where (u.id == id)
+                       select new UserModel { UserName = u.name, membership = m };
+            UserModel model = tabl.FirstOrDefault();
+
+            return View(model);
         }
 
         //
@@ -150,25 +146,14 @@ namespace projetSIABD.Controllers
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {      
-            /*try
-            {
-                my_aspnet_membership membership = db.my_aspnet_membership.Where(m=>m.userId.Equals(id)).FirstOrDefault();
-                membership.IsLockedOut = true;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return RedirectToAction("Delete", new { id = id });
-            }
-            */
+            
 
             string name = db.my_aspnet_users.Where(a => a.id.Equals(id)).FirstOrDefault().name;
 
 
             if (String.IsNullOrEmpty(name))
             {
-                return RedirectToAction("Delete");
+                return RedirectToAction("Delete", new { id = id });
             }
             // Peut lever une exception si l'utilisateur possède des messages ou des likes
             Membership.DeleteUser(name, true);

@@ -9,6 +9,21 @@
     <p>
         Connectez vous pour accéder au contenu du site.
         <br />
-        <%: Html.ActionLink("Ouvrir une session", "LogOn", "Account", null, new { @class = "btn"})%>
+        
+        <%
+            if (Request.IsAuthenticated) {
+        %>
+                Bienvenue <b><%: Page.User.Identity.Name %></b>!
+                <br /><br />
+                <%: Html.ActionLink("Accéder au fil d'actualité", "NewsFeed", "Messages", null, new { @class = "btn" }) %>
+                 <%: Html.ActionLink("Fermer la session", "LogOff", "Account", null, new { @class = "btn" })%> 
+        <%
+        }
+        else {
+        %> 
+             <%: Html.ActionLink("Ouvrir une session", "LogOn", "Account", null, new { @class = "btn" })%> 
+        <%
+        }
+        %>
     </p>
 </asp:Content>

@@ -1,32 +1,29 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<projetSIABD.Models.BossModels>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	Index
+	Statistiques du site
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>Index</h2>
+    <h2>Statistiques du site</h2>
 
     <table>
         <tr>
             <th>
-                UserName
+                Nom
             </th>
             <th>
                 Email
             </th>
             <th>
-                Comment
+                Commentaire
             </th>
             <th>
-                IsApproved
+                Autorisé
             </th>
             <th>
-                IsLockedOut
-            </th>
-            <th>
-                Last Activity Date
+                Dernière activité
             </th>
         </tr>
 
@@ -46,9 +43,6 @@
                 <%: item.membership.IsApproved %>
             </td>
             <td>
-                <%: item.membership.IsLockedOut %>
-            </td>
-            <td>
                <%: String.Format("{0:g}", item.membership.LastActivityDate) %>
             </td>
         </tr>
@@ -57,9 +51,6 @@
 
     </table>
 
-    <p>
-        <%: Html.ActionLink("Create New", "Create") %>
-    </p>
 
 </asp:Content>
 

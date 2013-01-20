@@ -1,18 +1,17 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<projetSIABD.Models.RegisterModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	Create
+	Créer un nouvel utilisateur
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>Create</h2>
+    <h2>Créer un nouvel utilisateur</h2>
 
     <% using (Html.BeginForm()) {%>
         <%: Html.ValidationSummary(true) %>
 
         <fieldset>
-            <legend>Fields</legend>
             
             <div class="editor-label">
                     <%: Html.LabelFor(m => m.UserName) %>
@@ -49,14 +48,14 @@
                
             
             <p>
-                <input type="submit" value="Create" />
+                <input type="submit" value="Créer" />
             </p>
         </fieldset>
 
     <% } %>
 
     <div>
-        <%: Html.ActionLink("Back to List", "Index") %>
+        <%: Html.ActionLink("Index des utilisateurs", "Index") %>
     </div>
 
 </asp:Content>
