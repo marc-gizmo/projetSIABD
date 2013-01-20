@@ -14,8 +14,6 @@ namespace projetSIABD.Controllers
         public ActionResult Index()
         {
             ViewData["Message"] = "Bienvenu sur le réseau social de l'entreprise *******";
-            my_aspnet_users moi = db.my_aspnet_users.Where(a => a.name.Equals(User.Identity.Name)).FirstOrDefault();
-
             return View();
         }
 
