@@ -1,21 +1,21 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<projetSIABD.Models.ThemeEditModels>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	Edit
+	Editer un thème
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>Edit</h2>
+    <h2>Editer un thème</h2>
 
     <% using (Html.BeginForm()) {%>
         <%: Html.ValidationSummary(true) %>
         
         <fieldset>
-            <legend>Editer le thême</legend>
+            <h3>Editer le thême</h3>
             
             <div class="editor-label">
-                <%: Html.LabelFor(model => model.theme.themeId) %>
+                <b>Identifiant</b>
             </div>
             <div class="editor-field">
                 <%: Model.theme.themeId %>
@@ -23,7 +23,7 @@
             </div>
             
             <div class="editor-label">
-                <%: Html.LabelFor(model => model.theme.name) %>
+                <b>Nom du thème</b>
             </div>
             <div class="editor-field">
                 <%: Html.TextBoxFor(model => model.theme.name) %>
@@ -31,18 +31,18 @@
             </div>
             
             <p>
-                <input type="submit" value="Save" />
+                <input type="submit" value="Editer" />
             </p>
         </fieldset>
 
     <% } %>
 
     <div>
-        <%: Html.ActionLink("Back to List", "Index") %>
+        <%: Html.ActionLink("Index des thèmes", "Index") %>
     </div>
 
     <fieldset>
-        <legend>Controler les abonnés. (<%: Model.abonnements.Count() %> abonné(s))</legend>
+        <h3>Controler les abonnés. (<%: Model.abonnements.Count() %> abonné(s))</h3>
         <table>
             <tr>
                 <th>Numéro d'abonnement</th>

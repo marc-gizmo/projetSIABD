@@ -1,19 +1,19 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<projetSIABD.themesdbs>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	AddUser
+	S'abonner à un thème
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>AddUser</h2>
+    <h2>S'abonner à un thème</h2>
 
     <h3>Voulez-vous vraiment vous abonner au thème suivant ?</h3>
     <fieldset>
-        <legend>Fields</legend>
+        
         <table>
             <tr>
-                <th>Id du thème</th>
+                <th>Identifiant</th>
                 <th>Nom du thème</th>
             </tr>
             <tr>
@@ -26,7 +26,7 @@
     <% using (Html.BeginForm()) { %>
         <p>
 		    <input type="submit" value="S'abonner" /> |
-		    <%: Html.ActionLink("Back to List", "Index") %>
+		    <%: Html.ActionLink("Index des thèmes", "Index") %>
         </p>
     <% } %>
 

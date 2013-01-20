@@ -30,8 +30,12 @@
         <th>
             " <%: Html.DisplayFor(modelItem => item.nouvelle.nouvelle.content)%> "
         </th>
+        <th>
+            <%if (item.nouvelle.nouvelle.themesdbs.name != "defaut")
+              { %>
         <th>Theme : 
             <%: Html.DisplayFor(modelItem => item.nouvelle.nouvelle.themesdbs.name)%>
+            <% } %>
         </th>
         <th>
             <% if (item.nouvelle.nouvelle.author == Model.currentUser)
