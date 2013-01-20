@@ -28,6 +28,44 @@ namespace projetSIABD.Controllers
             return View(data);
         }
 
+
+        //
+        // GET: /Messages/MyMessages
+
+        [Authorize()]
+        public ViewResult MyMessages()
+        {
+            my_aspnet_users moi = db.my_aspnet_users.Where(a => a.name.Equals(User.Identity.Name)).FirstOrDefault();
+
+            var messagesdbstest = from m in db.messagesdbs
+                                  join u in db.my_aspnet_users on m.author equals u.id
+                                  join t in db.themesdbs on m.theme equals t.themeId
+                                  select new projetSIABD.Models.messageWithJoin { nouvelle = m, author = u.name, theme = t.name };
+
+            //on prend les nouvelles de l'utilisateur
+            List<projetSIABD.Models.messageWithJoin> tmp = messagesdbstest.Where(m => m.nouvelle.author.Equals(moi.id)).ToList();
+            //List<projetSIABD.Models.messageWithJoin> tmp = messagesdbstest.ToList();
+            //tmp = tmp.Where(t => t.author.Equals(moi.id)).ToList();
+
+            
+            //on prend aussi les commentaires de l'utilisateur (on les ajoute à la liste tmp)
+            var commentsdbs = from m in db.commentsdbs
+                              select m;
+            List<commentsdbs> tmp2 = commentsdbs.Where(c => c.author.Equals(moi.id)).ToList();
+            foreach (var i in tmp2)
+            {
+                var aux = messagesdbstest.Where(m => m.nouvelle.messageID.Equals(i.messageId)).ToList().LastOrDefault();
+                if (tmp.Exists(t => t.nouvelle.messageID.Equals(aux.nouvelle.messageID))) { }//si on a deja cette nouvelle, on ne l'ajoute pas 
+                else { tmp.Add(aux); }
+            }
+
+            tmp = tmp.Distinct().OrderByDescending(t => t.nouvelle.date).ToList();
+            
+            var data = new projetSIABD.Models.newsFeedModels(tmp, User.Identity.Name, User.IsInRole("administrateur"));
+
+            return View(data);
+        }
+
         //
         // GET: /Messages/CreateANew
         [Authorize()]
