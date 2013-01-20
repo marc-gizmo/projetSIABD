@@ -44,16 +44,14 @@ namespace projetSIABD.Controllers
         [Authorize(Roles = "Administrateur")]
         public ActionResult Details(int id)
         {
-            my_aspnet_membership membership = db.my_aspnet_membership.FirstOrDefault();
-            foreach (my_aspnet_membership item in db.my_aspnet_membership)
-            {
-                if (item.userId == id)
-                {
-                    membership = item;
-                }
-            }
-            
-            return View(membership);
+            var temp = from m in db.my_aspnet_membership                      
+                        join u in db.my_aspnet_users on m.userId equals u.id
+                        where (u.id == id)
+                        select new UserModel { UserName = u.name, membership = m };
+
+            UserModel model = new UserModel();
+            model = temp.FirstOrDefault();
+            return View(model);
         }
 
         //

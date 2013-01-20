@@ -49,7 +49,7 @@
                 <%: Html.LabelFor(model => model.membership.IsApproved)%>
             </div>
             <div class="editor-field">
-                <%: Html.TextBoxFor(model => (bool) model.membership.IsApproved)%>
+                <%: Html.TextBoxFor(model => model.membership.IsApproved)%>
                 <%: Html.ValidationMessageFor(model => model.membership.IsApproved)%>
             </div>
            

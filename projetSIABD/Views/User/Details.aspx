@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<projetSIABD.my_aspnet_membership>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<projetSIABD.Models.UserModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
 	Details
@@ -10,25 +10,60 @@
 
     <fieldset>
         <legend>Fields</legend>
-        
-        <div class="display-label">userId</div>
-        <div class="display-field"><%: Model.userId %></div>
-        
-        <div class="display-label">Email</div>
-        <div class="display-field"><%: Model.Email %></div>
-        
-        <div class="display-label">Comment</div>
-        <div class="display-field"><%: Model.Comment %></div>
-        
-              
-        <div class="display-label">IsApproved</div>
-        <div class="display-field"><%: Model.IsApproved %></div>
+        <table>
+        <tr>
+           
+            <th>
+                userId
+            </th>
+            <th>
+                userName
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Comment
+            </th>
+            
+            <th>
+                IsApproved
+            </th>         
+            
+            
+        </tr>
+    
+        <tr>
+          
+            <td>
+                <%: Model.membership.userId %>
+            </td>
+            <td>
+                <%: Model.UserName %>
+            </td>
+            <td>
+                <%: Model.membership.Email %>
+            </td>
+            <td>
+                <%: Model.membership.Comment %>
+            </td>
+            
+            <td>
+                <%: Model.membership.IsApproved %>
+            </td>
+                        
+           
+        </tr>
+    
+
+
+    </table>
                      
         
     </fieldset>
     <p>
 
-        <%: Html.ActionLink("Edit", "Edit", new { id=Model.userId }) %> |
+        <%: Html.ActionLink("Edit", "Edit", new { id=Model.membership.userId }) %> |
         <%: Html.ActionLink("Back to List", "Index") %>
     </p>
 
