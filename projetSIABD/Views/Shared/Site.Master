@@ -13,7 +13,7 @@
 
         <div id="header">
             <div id="title">
-                <h1>Mon application MVC</h1>
+                <h1>Projet SIABD</h1>
             </div>
               
             <div id="logindisplay">
@@ -24,7 +24,6 @@
             
                 <ul id="menu">              
                     <li><%: Html.ActionLink("Accueil", "Index", "Home")%></li>
-                    <li><%: Html.ActionLink("À propos de", "About", "Home")%></li>
                     <li><%: Html.ActionLink("Fil d'actualités","NewsFeed","Messages") %></li>
                     <li><%: Html.ActionLink("Mes messages","MyMessages","Messages") %></li>
                     <li><%: Html.ActionLink("Voir les thèmes", "Index", "Themes") %></li>
@@ -40,6 +39,11 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server" />
 
             <div id="footer">
+                <p>
+                Site réalisé par E. Viratelle et M. Balemboy dans le cadre de l'option SIABD de l'ENSIIE - 2012/2013
+                <br />
+                <%: Html.ActionLink("About us.", "About", "Home")%>
+                </p>
             </div>
         </div>
     </div>

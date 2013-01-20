@@ -11,7 +11,7 @@ namespace projetSIABD.Controllers
     {
         public ActionResult Index()
         {
-            ViewData["Message"] = "Bienvenue dans ASP.NET MVC !";
+            ViewData["Message"] = "Bienvenu sur le réseau social de l'entreprise *******";
 
             return View();
         }
