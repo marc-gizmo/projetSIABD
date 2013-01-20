@@ -14,7 +14,7 @@
         <%: Html.ValidationSummary(true, "Échec de la connexion. Corrigez les erreurs et réessayez.") %>
         <div>
             <fieldset>
-                <legend>Informations de compte</legend>
+                
                 
                 <div class="editor-label">
                     <%: Html.LabelFor(m => m.UserName) %>

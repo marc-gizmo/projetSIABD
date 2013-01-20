@@ -1,19 +1,19 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<projetSIABD.Models.ThemeIndexModels>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	Index
+	Index des thèmes
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>Index</h2>
+    <h2>Index des thèmes</h2>
 
     <table>
         <tr>
             <th></th>
-            <th>ThemeId</th>
-            <th>ThemeName</th>
-            <th>NbUser</th>
+            <th>Identifiant</th>
+            <th>Nom du thème</th>
+            <th>Nombre d'abonnés</th>
             <th></th>
         </tr>
 
@@ -33,19 +33,28 @@
             <td><%: item.theme.name %></td>
             <td><%: item.nbUser%></td>
             <td>
-                <%: Html.ActionLink("Edit", "Edit", new { id=item.theme.themeId }) %> |
-               
-                <%: Html.ActionLink("Delete", "Delete", new { id=item.theme.themeId })%>
-            </td>
-            <% if (item.isInTheme == 0)
+            <% if (Page.User.IsInRole("Administrateur"))
                { %>
-            <td></td>
+
+                <%: Html.ActionLink("Editer", "Edit", new { id = item.theme.themeId })%> |
+               
+                <%: Html.ActionLink("Supprimer", "Delete", new { id = item.theme.themeId })%>
+            
             <% }
-               else
-               {  %>
-            <td><%: Html.ActionLink("Poster une News dans ce theme", "CreateThemedNew", "Messages", new { themeId = item.theme.themeId }, new { @class = "btn" })%></td>
-            <td><%: Html.ActionLink("Voir les nouvelles", "MessagesInTheme", "Messages", new { themeId = item.theme.themeId }, new { @class = "btn" })%></td>
+               %>
+               <% if (item.isInTheme != 0)           
+               {
+                   if (Page.User.IsInRole("Administrateur"))
+                   { %>
+               | 
+               <% } %>
+                <%: Html.ActionLink("Poster une News dans ce theme", "CreateThemedNew", "Messages", new { themeId = item.theme.themeId }, new { @class = "btn" })%>
+                <%: Html.ActionLink("Voir les nouvelles", "MessagesInTheme", "Messages", new { themeId = item.theme.themeId }, new { @class = "btn" })%>
+
             <% } %>
+            
+            
+            </td>
         </tr>
     
     <% } %>
@@ -53,7 +62,7 @@
     </table>
 
     <p>
-        <%: Html.ActionLink("Create New", "Create") %>
+        <%: Html.ActionLink("Créer un nouveau thème", "Create") %>
     </p>
 
 </asp:Content>
