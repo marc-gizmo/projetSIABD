@@ -47,6 +47,22 @@ namespace projetSIABD.Controllers
             return View(data);
         }
 
+        //
+        // GET: /Messages/MessagesInTheme
+        [Authorize()]
+        public ViewResult MessagesInTheme(int themeId)
+        {
+            var messagesdbstest = from m in db.messagesdbs
+                                  join u in db.my_aspnet_users on m.author equals u.id
+                                  join t in db.themesdbs on m.theme equals t.themeId
+                                  select new projetSIABD.Models.messageWithJoin { nouvelle = m, author = u.name, theme = t.name };
+            List<projetSIABD.Models.messageWithJoin> aux = messagesdbstest.ToList();
+
+            var tmp = aux.Where(m => m.nouvelle.theme.Equals(themeId)).OrderByDescending(t => t.nouvelle.date).ToList();
+            var data = new projetSIABD.Models.newsFeedModels(tmp, User.Identity.Name, User.IsInRole("administrateur"));
+            return View(data);
+        }
+
 
         //
         // GET: /Messages/MyMessages

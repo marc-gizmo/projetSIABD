@@ -6,7 +6,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Publier une nouvelle</h2>
+<h2>Publier une nouvelle dans un theme</h2>
 
 <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
 <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
@@ -15,11 +15,7 @@
     <%: Html.ValidationSummary(true) %>
     <fieldset>
         <legend>publier une nouvelle</legend>
-
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.theme) %>
-            <%: Html.ValidationMessageFor(model => model.theme) %>
-        </div>
+            <%: Html.HiddenFor(model => model.theme) %>
 
         <div class="editor-label">
             <%: Html.LabelFor(model => model.content) %>
@@ -36,7 +32,7 @@
 <% } %>
 
 <div>
-    <%: Html.ActionLink("Back to List", "NewsFeed", new { @class = "btn" })%>
+    <%: Html.ActionLink("Back to List", "NewsFeed", "Messages", null, new { @class = "btn" })%>
 </div>
 
 </asp:Content>

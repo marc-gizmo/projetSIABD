@@ -43,7 +43,8 @@
             <% }
                else
                {  %>
-            <td><%: Html.ActionLink("Poster une News dans ce theme", "CreateThemedNew", "Messages", new { themeId = item.theme.themeId }, null)%></td>
+            <td><%: Html.ActionLink("Poster une News dans ce theme", "CreateThemedNew", "Messages", new { themeId = item.theme.themeId }, new { @class = "btn" })%></td>
+            <td><%: Html.ActionLink("Voir les nouvelles", "MessagesInTheme", "Messages", new { themeId = item.theme.themeId }, new { @class = "btn" })%></td>
             <% } %>
         </tr>
     
