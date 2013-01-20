@@ -9,6 +9,6 @@
     <p>
         Connectez vous pour accéder au contenu du site.
         <br />
-        <%: Html.ActionLink("Ouvrir une session", "LogOn", "Account") %>
+        <%: Html.ActionLink("Ouvrir une session", "LogOn", "Account", null, new { @class = "btn"})%>
     </p>
 </asp:Content>

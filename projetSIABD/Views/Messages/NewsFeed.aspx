@@ -14,7 +14,7 @@
 <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
 
 <p>
-    <%: Html.ActionLink("Publier une nouvelle", "CreateANew") %>
+    <%: Html.ActionLink("Publier une nouvelle", "CreateANew", null, new { @class = "btn" })%>
 </p>
 
 <h2>Dernières parutions</h2>
@@ -36,13 +36,13 @@
         <th>
             <% if (item.nouvelle.nouvelle.author == Model.currentUser)
                { %>
-                 <%: Html.ActionLink("Supprimer mon message", "DeleteMyMessage", new { id = item.nouvelle.nouvelle.messageID })%>
+                 <%: Html.ActionLink("Supprimer mon message", "DeleteMyMessage", "Messages", new { id = item.nouvelle.nouvelle.messageID }, new{ @class = "btn" })%>
             <% } %>
         </th>
         <th>
             <% if (Model.isAdmin == true)
                {%>
-                     <%: Html.ActionLink("Modérer ce message", "ModerateMessage", new { id = item.nouvelle.nouvelle.messageID })%>
+                     <%: Html.ActionLink("Modérer ce message", "ModerateMessage", "Messages", new { id = item.nouvelle.nouvelle.messageID }, new { @class = "btn" })%>
             <% } %>
         </th>
     </tr>
@@ -54,32 +54,32 @@
             <%: Html.DisplayFor(modelItem => helper.author)%> a commenté ce message : 
         </td>
         <td>
-           " <%: Html.DisplayFor(modelItem => helper.content) %> "
+           " <%: Html.DisplayFor(modelItem => helper.comment.content) %> "
         </td>
         <td></td>
         <td>
-            <% if (helper.author == Model.currentUser)
+            <% if (helper.comment.author == Model.currentUser)
                { %>
-                 <%: Html.ActionLink("Supprimer mon commentaire", "DeleteMyComment", "Comments", new { id = item.nouvelle.nouvelle.messageID }, null)%>
+                 <%: Html.ActionLink("Supprimer mon commentaire", "DeleteMyComment", "Comments", new { id = item.nouvelle.nouvelle.messageID }, new { @class = "btn" })%>
             <% } %>
         </td>
         <td>
             <% if (Model.isAdmin == true)
                {%>
-                     <%: Html.ActionLink("Modérer ce commentaire", "ModerateComment", "Comments", new { id = item.nouvelle.nouvelle.messageID }, null)%>
+                     <%: Html.ActionLink("Modérer ce commentaire", "ModerateComment", "Comments", new { id = item.nouvelle.nouvelle.messageID }, new { @class = "btn" })%>
             <% } %>
         </td>
     </tr>
     <% } %>
     <tr>
         <td>
-            <%: Html.ActionLink("Commenter la nouvelle", "CreateAComment", "Comments", new { id = item.nouvelle.nouvelle.messageID }, null)%>
+            <%: Html.ActionLink("Commenter la nouvelle", "CreateAComment", "Comments", new { id = item.nouvelle.nouvelle.messageID }, new { @class = "btn" })%>
         </td>
     </tr>
     <tr>
         <% if (item.likes.Where(a => a.liker.Equals(Model.currentUser)).Count() == 0) { %>         
         <td>
-            <%: Html.ActionLink("J'aime", "LikeANew", "Like", new { id = item.nouvelle.nouvelle.messageID }, null)%>
+            <%: Html.ActionLink("J'aime", "LikeANew", "Like", new { id = item.nouvelle.nouvelle.messageID }, new { @class = "btn" } )%>
         </td>
         <td>
             <% if (item.nbLikes > 1) { %> 
@@ -92,7 +92,7 @@
         </td>
         <% } else {%>
         <td>
-            <%: Html.ActionLink("Je n'aime plus", "DislikeANew", "Like", new { id = item.nouvelle.nouvelle.messageID }, null)%>
+            <%: Html.ActionLink("Je n'aime plus", "DislikeANew", "Like", new { id = item.nouvelle.nouvelle.messageID }, new { @class = "btn" })%>
         </td>
         <td>
             <% if (item.nbLikes > 1) { %> 

@@ -15,11 +15,17 @@ namespace projetSIABD.Models
         public string theme { get; set; }
     }
 
+    public class commentWithJoin
+    {
+        public commentsdbs comment { get; set; }
+        public string author { get; set; }
+    }
+
     public class messageWithComments
     {
         private MySQLEntities db = new MySQLEntities();
         public messageWithJoin nouvelle { get; set; }
-        public List<commentsdbs> associatedComments { get; set; }
+        public List<commentWithJoin> associatedComments { get; set; }
         public List<likesdbs> likes { get; set; }
         public int nbLikes { get; set; }
 
@@ -30,7 +36,10 @@ namespace projetSIABD.Models
                                   join t in db.themesdbs on m.theme equals t.themeId
                                   select new projetSIABD.Models.messageWithJoin { nouvelle = m, author = u.name, theme = t.name };
             nouvelle = messagesdbstest.Where(a => a.nouvelle.messageID.Equals(messageID)).FirstOrDefault();
-            associatedComments = db.commentsdbs.Where(a => a.messageId.Equals(messageID)).OrderByDescending(a => a.date).ToList();
+            var commentsdbstest = from c in db.commentsdbs
+                                  join u in db.my_aspnet_users on c.author equals u.id
+                                  select new projetSIABD.Models.commentWithJoin { comment = c, author = u.name };
+            associatedComments = commentsdbstest.Where(c => c.comment.messageId.Equals(messageID)).OrderByDescending(c => c.comment.date).ToList();
             likes = db.likesdbs.Where(l => l.messageApproved.Equals(messageID)).ToList();
             nbLikes = likes.Count();
         }
