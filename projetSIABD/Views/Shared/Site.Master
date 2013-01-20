@@ -29,9 +29,18 @@
             
                 <ul id="menu">              
                     <li><%: Html.ActionLink("Accueil", "Index", "Home")%></li>
+                    <% if (Request.IsAuthenticated)
+                       { %>
                     <li><%: Html.ActionLink("Fil d'actualités","NewsFeed","Messages") %></li>
+                    <% } %>
+                    <% if (Request.IsAuthenticated)
+                       { %>
                     <li><%: Html.ActionLink("Mes messages","MyMessages","Messages") %></li>
+                    <% } %>
+                    <% if (Request.IsAuthenticated)
+                       { %>
                     <li><%: Html.ActionLink("Voir les thèmes", "Index", "Themes") %></li>
+                    <% } %>
                     <% if (Page.User.IsInRole("boss")) { %>
                     <li><%: Html.ActionLink("Statistiques du site","Index","Boss")%></li>
                     <% } %>

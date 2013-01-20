@@ -51,33 +51,33 @@ namespace projetSIABD.Controllers
         [Authorize()]
         public ActionResult DeleteMyComment(int id)
         {
-            my_aspnet_users user = db.my_aspnet_users.Where(a => a.name.Equals(User.Identity.Name)).FirstOrDefault();
+            my_aspnet_users moi = db.my_aspnet_users.Where(a => a.name.Equals(User.Identity.Name)).FirstOrDefault();
             commentsdbs commentsdbs = db.commentsdbs.Where(m => m.ID.Equals(id)).FirstOrDefault();
-            if (commentsdbs.author == user.id) // on a le droit de supprimer que ses messages
+            if (commentsdbs.author == moi.id) // on a le droit de supprimer que ses messages
             {
                 try
                 {
                     db.commentsdbs.DeleteObject(commentsdbs);
                     db.SaveChanges();
 
-                    return RedirectToAction("NewsFeed");
+                    return RedirectToAction("NewsFeed", "Messages");
                 }
                 catch
                 {
-                    return RedirectToAction("NewsFeed");
+                    return RedirectToAction("NewsFeed", "Messages");
                 }
             }
             else
             {
                 //il faut afficher un message d'erreur
-                return RedirectToAction("NewsFeed");
+                return RedirectToAction("NewsFeed", "Messages");
             }
         }
 
         //
         // POST: /Messages/ModerateComment
         [Authorize(Roles = "Administrateur")]
-        public ActionResult ModerateMessage(int id)
+        public ActionResult ModerateComment(int id)
         {
             commentsdbs commentsdbs = db.commentsdbs.Where(m => m.ID.Equals(id)).FirstOrDefault();
             try
@@ -85,11 +85,11 @@ namespace projetSIABD.Controllers
                 db.commentsdbs.DeleteObject(commentsdbs);
                 db.SaveChanges();
 
-                return RedirectToAction("NewsFeed");
+                return RedirectToAction("NewsFeed", "Messages");
             }
             catch
             {
-                return RedirectToAction("NewsFeed");
+                return RedirectToAction("NewsFeed", "Messages");
             }
         }
 
