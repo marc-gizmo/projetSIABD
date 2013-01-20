@@ -30,13 +30,10 @@
         <th>
             " <%: Html.DisplayFor(modelItem => item.nouvelle.nouvelle.content)%> "
         </th>
-<<<<<<< HEAD
         <th>
             <%if (item.nouvelle.nouvelle.themesdbs.name != "defaut")
               { %>
-=======
         <th>Theme : 
->>>>>>> 475479b2c1735eb1516b490d52ab9f6f73381c38
             <%: Html.DisplayFor(modelItem => item.nouvelle.nouvelle.themesdbs.name)%>
             <% } %>
         </th>
