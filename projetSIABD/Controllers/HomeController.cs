@@ -9,10 +9,11 @@ namespace projetSIABD.Controllers
     [HandleError]
     public class HomeController : Controller
     {
+        private MySQLEntities db = new MySQLEntities();
+
         public ActionResult Index()
         {
             ViewData["Message"] = "Bienvenu sur le réseau social de l'entreprise *******";
-
             return View();
         }
 

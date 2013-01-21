@@ -49,7 +49,7 @@
         <td>
             <% if (helper.comment.author == Model.currentUser)
                { %>
-                 <%: Html.ActionLink("Supprimer mon commentaire", "DeleteMyComment", "Comments", new { id = item.nouvelle.nouvelle.messageID }, new { @class = "btn" })%>
+                 <%: Html.ActionLink("Supprimer mon commentaire", "DeleteMyComment", "Comments", new { id = helper.comment.ID }, new { @class = "btn" })%>
             <% } %>
         </td>
     </tr>
