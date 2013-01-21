@@ -6,7 +6,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Nouvelles dans le theme <%:Model.ListOfNew.LastOrDefault().nouvelle.nouvelle.themesdbs.name%></h2>
+<h2>Messages dans le theme <%:Model.ListOfNew.LastOrDefault().nouvelle.nouvelle.themesdbs.name%></h2>
 
 <table>
 <% foreach (var item in Model.ListOfNew) { %>

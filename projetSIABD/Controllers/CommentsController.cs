@@ -15,7 +15,7 @@ namespace projetSIABD.Controllers
 
         //
         // GET: /Comments/CreateAComment
-
+        [Authorize()]
         public ActionResult CreateAComment(int id)
         {
             commentsdbs commentsdbs = new commentsdbs();
@@ -25,7 +25,7 @@ namespace projetSIABD.Controllers
 
         //
         // POST: /Comments/CreateAComment
-
+        [Authorize()]
         [HttpPost]
         public ActionResult CreateAComment(commentsdbs commentsdbs)
         {
@@ -85,11 +85,13 @@ namespace projetSIABD.Controllers
                 db.commentsdbs.DeleteObject(commentsdbs);
                 db.SaveChanges();
 
+
                 return RedirectToAction("NewsFeed", "Messages");
             }
             catch
             {
                 return RedirectToAction("NewsFeed", "Messages");
+
             }
         }
 

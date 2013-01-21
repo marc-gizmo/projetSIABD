@@ -23,7 +23,7 @@
         <th>
             <%if (item.nouvelle.nouvelle.themesdbs.name != "defaut")
               { %>
-        <th>theme : 
+        Theme : 
             <%: Html.DisplayFor(modelItem => item.nouvelle.nouvelle.themesdbs.name)%>
             <% } %>
         </th>
@@ -33,12 +33,7 @@
                  <%: Html.ActionLink("Supprimer mon message", "DeleteMyMessage", "Messages", new { id = item.nouvelle.nouvelle.messageID }, new{ @class = "btn" })%>
             <% } %>
         </th>
-        <th>
-            <% if (Model.isAdmin == true)
-               {%>
-                     <%: Html.ActionLink("Modérer ce message", "ModerateMessage", "Messages", new { id = item.nouvelle.nouvelle.messageID }, new { @class = "btn" })%>
-            <% } %>
-        </th>
+      
     </tr>
     <% //here begin the comments %>
     <% foreach (var helper in item.associatedComments) { %>
@@ -55,12 +50,6 @@
             <% if (helper.comment.author == Model.currentUser)
                { %>
                  <%: Html.ActionLink("Supprimer mon commentaire", "DeleteMyComment", "Comments", new { id = helper.comment.ID }, new { @class = "btn" })%>
-            <% } %>
-        </td>
-        <td>
-            <% if (Model.isAdmin == true)
-               {%>
-                     <%: Html.ActionLink("Modérer ce commentaire", "ModerateComment", "Comments", new { id = helper.comment.ID }, new { @class = "btn" })%>
             <% } %>
         </td>
     </tr>

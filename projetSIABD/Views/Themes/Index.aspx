@@ -48,8 +48,8 @@
                    { %>
                | 
                <% } %>
-                <%: Html.ActionLink("Poster une News dans ce theme", "CreateThemedNew", "Messages", new { themeId = item.theme.themeId }, new { @class = "btn" })%>
-                <%: Html.ActionLink("Voir les nouvelles", "MessagesInTheme", "Messages", new { themeId = item.theme.themeId }, new { @class = "btn" })%>
+                <%: Html.ActionLink("Poster un message dans ce theme", "CreateThemedNew", "Messages", new { themeId = item.theme.themeId }, new { @class = "btn" })%>
+                <%: Html.ActionLink("Voir les messages", "MessagesInTheme", "Messages", new { themeId = item.theme.themeId }, new { @class = "btn" })%>
 
             <% } %>
             
