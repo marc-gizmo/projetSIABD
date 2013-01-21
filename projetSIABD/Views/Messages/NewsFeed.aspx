@@ -33,7 +33,7 @@
         <th>
             <%if (item.nouvelle.nouvelle.themesdbs.name != "defaut")
               { %>
-        <th>Theme : 
+        Theme : 
             <%: Html.DisplayFor(modelItem => item.nouvelle.nouvelle.themesdbs.name)%>
             <% } %>
         </th>

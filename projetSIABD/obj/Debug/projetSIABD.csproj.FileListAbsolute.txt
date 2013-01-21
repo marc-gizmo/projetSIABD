@@ -13,3 +13,5 @@ C:\Users\Emmanuel\Desktop\siabd\github\projetSIABD\projetSIABD\bin\projetSIABD.p
 C:\Users\Emmanuel\Desktop\siabd\github\projetSIABD\projetSIABD\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Emmanuel\Desktop\siabd\github\projetSIABD\projetSIABD\obj\Debug\projetSIABD.dll
 C:\Users\Emmanuel\Desktop\siabd\github\projetSIABD\projetSIABD\obj\Debug\projetSIABD.pdb
+C:\Users\Emmanuel\Desktop\siabd\github\projetSIABD\projetSIABD\bin\MySql.Data.dll
+C:\Users\Emmanuel\Desktop\siabd\github\projetSIABD\projetSIABD\bin\MySql.Web.dll

@@ -77,7 +77,7 @@ namespace projetSIABD.Controllers
         //
         // POST: /Messages/ModerateComment
         [Authorize(Roles = "Administrateur")]
-        public ActionResult ModerateMessage(int id)
+        public ActionResult ModerateComment(int id)
         {
             commentsdbs commentsdbs = db.commentsdbs.Where(m => m.ID.Equals(id)).FirstOrDefault();
             try
@@ -85,11 +85,11 @@ namespace projetSIABD.Controllers
                 db.commentsdbs.DeleteObject(commentsdbs);
                 db.SaveChanges();
 
-                return RedirectToAction("NewsFeed");
+                return RedirectToAction("NewsFeed","Messages");
             }
             catch
             {
-                return RedirectToAction("NewsFeed");
+                return RedirectToAction("NewsFeed","Messages");
             }
         }
 
